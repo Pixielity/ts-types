@@ -17,13 +17,6 @@ interface IConfigLoader {
      * @returns Whether the loader can load from the source
      */
     canLoad(source: string): boolean;
-    /**
-     * Get the priority of this loader
-     * Higher priority loaders are tried first
-     *
-     * @returns The loader priority
-     */
-    getPriority(): number;
 }
 /**
  * Namespace containing symbols for dependency injection
