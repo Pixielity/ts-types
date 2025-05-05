@@ -40,6 +40,7 @@ export { ICacheValueResult } from './react/cache-value-result.interface.mjs';
 export { IApplication as IConsoleApplication } from './console/application.interface.mjs';
 export { ICommand } from './console/command.interface.mjs';
 export { ICommandShortcut } from './console/command-shortcut.interface.mjs';
+export { ICommandOptions } from './console/command-options.interface.mjs';
 export { ICommandRegistry } from './console/command-registry.interface.mjs';
 export { ICommandCollector } from './console/command-collector.interface.mjs';
 export { ICommandScheduler } from './console/command-scheduler.interface.mjs';

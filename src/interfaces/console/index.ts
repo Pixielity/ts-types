@@ -2,6 +2,7 @@
 export { IApplication as IConsoleApplication } from './application.interface'
 export * from './command.interface'
 export * from './command-shortcut.interface'
+export * from './command-options.interface'
 export * from './command-registry.interface'
 export * from './command-collector.interface'
 export * from './command-scheduler.interface'

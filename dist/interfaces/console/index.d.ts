@@ -1,6 +1,7 @@
 export { IApplication as IConsoleApplication } from './application.interface.js';
 export { ICommand } from './command.interface.js';
 export { ICommandShortcut } from './command-shortcut.interface.js';
+export { ICommandOptions } from './command-options.interface.js';
 export { ICommandRegistry } from './command-registry.interface.js';
 export { ICommandCollector } from './command-collector.interface.js';
 export { ICommandScheduler } from './command-scheduler.interface.js';
