@@ -12,6 +12,10 @@ interface IConfigOptions {
      */
     defaultValue?: any;
     /**
+     * The enviroment variables
+     */
+    env?: string;
+    /**
      * Whether to refresh the value when accessed
      * When true, the value is retrieved from the config repository each time
      * @default false
