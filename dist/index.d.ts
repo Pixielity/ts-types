@@ -69,6 +69,7 @@ export { IParamMetadata } from './interfaces/routing/param-metadata.interface.js
 export { IRouterConfig } from './interfaces/routing/router-config.interface.js';
 export { IRouteDefinition } from './interfaces/routing/route-definition.interface.js';
 export { IControllerDefinition } from './interfaces/routing/controller-definition.interface.js';
+export { Abstract } from './interfaces/abstract.interface.js';
 export { ConfigEnvironment } from './enums/config-enviroment.enum.js';
 export { ParamType } from './enums/param-type.enum.js';
 export { QuestionType } from './enums/question-type.enum.js';
