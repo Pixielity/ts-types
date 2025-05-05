@@ -1,5 +1,5 @@
 /**
- * @pixielity/ts-types v1.0.0
+ * @pixielity/ts-types v1.0.1
  * 
  * Advanced TypeScript type utilities with metadata inheritance support
  * 
