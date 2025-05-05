@@ -17,7 +17,7 @@ export { IConfigSchema } from './interfaces/config/schema.interface.mjs';
 export { IConfigLoader } from './interfaces/config/loader.interface.mjs';
 export { IConfigOptions } from './interfaces/config/decorator-options.interface.mjs';
 export { IConfig } from './interfaces/config/config.interface.mjs';
-export { I as IContainer } from './index-CeVQL4G4.mjs';
+export { I as IContainer } from './index-BPvk6K5t.mjs';
 export { IClassDecoratorOptions } from './interfaces/decorators/class-decorator-options.interface.mjs';
 export { ILogOptions } from './interfaces/decorators/log-options.interface.mjs';
 export { IValidationFunction } from './interfaces/decorators/validation-function.interface.mjs';

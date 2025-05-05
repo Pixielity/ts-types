@@ -1,6 +1,9 @@
-import { I as IContainer } from '../../index-CeVQL4G4.mjs';
+import { I as IContainer } from '../../index-BPvk6K5t.mjs';
 import './service-provider.inteface.mjs';
 import 'inversify';
+import '../../types/service-identifier.type.mjs';
+import '../../types/newable.type.mjs';
+import '../abstract.interface.mjs';
 
 /**
  * Interface for the application

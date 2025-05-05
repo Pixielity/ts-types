@@ -1,6 +1,8 @@
-import type { Container as InversifyContainer, interfaces } from "inversify"
-import type { IContextualBindingBuilder } from "./contextual-binding-builder.interface"
-import type { IServiceProvider } from "../application"
+import type { Container as InversifyContainer, interfaces } from 'inversify'
+
+import type { IContextualBindingBuilder } from './contextual-binding-builder.interface'
+import type { IServiceProvider } from '../application'
+import { ServiceIdentifier } from '../../types'
 
 /**
  * Interface for the service container.
@@ -8,6 +10,8 @@ import type { IServiceProvider } from "../application"
 export interface IContainer {
   /**
    * Get the underlying Inversify container.
+   *
+   * @returns The Inversify container
    */
   getInversifyContainer(): InversifyContainer
 
@@ -15,13 +19,15 @@ export interface IContainer {
    * Determine if the given abstract type has been bound.
    *
    * @param abstract - The abstract type to check
+   * @returns True if the abstract type has been bound, false otherwise
    */
-  has(abstract: string): boolean
+  has(abstract: ServiceIdentifier): boolean
 
   /**
    * Load container modules.
    *
    * @param modules - The container modules to load
+   * @returns The container instance
    */
   load(...modules: interfaces.ContainerModule[]): IContainer
 
@@ -36,6 +42,7 @@ export interface IContainer {
    * Unload container modules.
    *
    * @param modules - The container modules to unload
+   * @returns The container instance
    */
   unload(...modules: interfaces.ContainerModuleBase[]): IContainer
 
@@ -54,7 +61,7 @@ export interface IContainer {
    * @param shared - Whether the binding should be shared
    */
   bind<T>(
-    abstract: string | interfaces.ServiceIdentifier<T>,
+    abstract: string | ServiceIdentifier<T>,
     concrete?: any,
     shared?: boolean,
   ): IContainer | interfaces.BindingToSyntax<T>
@@ -63,29 +70,31 @@ export interface IContainer {
    * Rebind a service identifier.
    *
    * @param serviceIdentifier - The service identifier to rebind
+   * @returns The binding syntax
    */
-  rebind<T>(serviceIdentifier: interfaces.ServiceIdentifier<T>): interfaces.BindingToSyntax<T>
+  rebind<T>(serviceIdentifier: ServiceIdentifier<T>): interfaces.BindingToSyntax<T>
 
   /**
    * Rebind a service identifier asynchronously.
    *
    * @param serviceIdentifier - The service identifier to rebind
    */
-  rebindAsync<T>(serviceIdentifier: interfaces.ServiceIdentifier<T>): Promise<interfaces.BindingToSyntax<T>>
+  rebindAsync<T>(serviceIdentifier: ServiceIdentifier<T>): Promise<interfaces.BindingToSyntax<T>>
 
   /**
    * Unbind a service identifier.
    *
    * @param serviceIdentifier - The service identifier to unbind
    */
-  unbind(serviceIdentifier: interfaces.ServiceIdentifier<any>): void
+  unbind(serviceIdentifier: ServiceIdentifier<any>): void
 
   /**
    * Unbind a service identifier asynchronously.
    *
    * @param serviceIdentifier - The service identifier to unbind
+   * @returns A promise that resolves when the unbinding is complete
    */
-  unbindAsync(serviceIdentifier: interfaces.ServiceIdentifier<any>): Promise<void>
+  unbindAsync(serviceIdentifier: ServiceIdentifier<any>): Promise<void>
 
   /**
    * Unbind all bindings.
@@ -94,8 +103,19 @@ export interface IContainer {
 
   /**
    * Unbind all bindings asynchronously.
+   *
+   * @returns A promise that resolves when all unbindings are complete
    */
   unbindAllAsync(): Promise<void>
+
+  /**
+   * Unbind a tagged binding.
+   *
+   * @param serviceIdentifier - The service identifier
+   * @param key - The tag key
+   * @param value - The tag value
+   */
+  unbindTagged<T>(serviceIdentifier: ServiceIdentifier<T>, key: string, value: any): void
 
   /**
    * Register a binding with a tag.
@@ -106,36 +126,46 @@ export interface IContainer {
    * @param value - The tag value
    * @param shared - Whether the binding should be shared
    */
-  bindTagged(abstract: string, concrete: any, tag: string, value: any, shared?: boolean): IContainer
+  bindTagged(
+    abstract: ServiceIdentifier,
+    concrete: any,
+    tag: string,
+    value: any,
+    shared?: boolean,
+  ): IContainer
 
   /**
    * Register a shared binding in the container.
    *
    * @param abstract - The abstract type to bind
    * @param concrete - The concrete implementation
+   * @returns The container instance
    */
-  singleton(abstract: string, concrete: any): IContainer
+  singleton<T>(abstract: ServiceIdentifier<T>, concrete: any): IContainer
 
   /**
    * Register an existing instance as shared in the container.
    *
    * @param abstract - The abstract type to bind
    * @param instance - The instance to register
+   * @returns The container instance
    */
-  instance(abstract: string, instance: any): IContainer
+  instance<T>(abstract: ServiceIdentifier<T>, instance: T): IContainer
 
   /**
    * Alias a type to a different name.
    *
    * @param abstract - The abstract type to alias
-   * @param alias - The alias name
+   * @param alias - The alias identifier
+   * @returns The container instance
    */
-  alias(abstract: string, alias: string): IContainer
+  alias<T>(abstract: ServiceIdentifier<T>, alias: ServiceIdentifier<T>): IContainer
 
   /**
    * Apply middleware to the container.
    *
    * @param middlewares - The middleware to apply
+   * @returns The container instance
    */
   applyMiddleware(...middlewares: interfaces.Middleware[]): IContainer
 
@@ -143,6 +173,7 @@ export interface IContainer {
    * Apply a custom metadata reader to the container.
    *
    * @param metadataReader - The metadata reader to apply
+   * @returns The container instance
    */
   applyCustomMetadataReader(metadataReader: interfaces.MetadataReader): IContainer
 
@@ -150,8 +181,20 @@ export interface IContainer {
    * Define a contextual binding.
    *
    * @param concrete - The concrete implementation that needs a dependency
+   * @returns A builder for defining the contextual binding
    */
   when(concrete: string | Function): IContextualBindingBuilder
+
+  /**
+   * Register a contextual binding in the container.
+   *
+   * @param concrete - The concrete implementation that needs a dependency
+   * @param abstract - The abstract type that the concrete implementation needs
+   * @param tag - The tag for the binding
+   * @returns The container instance
+   * @internal
+   */
+  registerContextualBinding(concrete: string, abstract: ServiceIdentifier, tag: string): IContainer
 
   /**
    * Register an activation handler for a service.
@@ -160,7 +203,7 @@ export interface IContainer {
    * @param onActivation - The activation handler
    */
   onActivation<T>(
-    serviceIdentifier: interfaces.ServiceIdentifier<T>,
+    serviceIdentifier: ServiceIdentifier<T>,
     onActivation: interfaces.BindingActivation<T>,
   ): void
 
@@ -171,7 +214,7 @@ export interface IContainer {
    * @param onDeactivation - The deactivation handler
    */
   onDeactivation<T>(
-    serviceIdentifier: interfaces.ServiceIdentifier<T>,
+    serviceIdentifier: ServiceIdentifier<T>,
     onDeactivation: interfaces.BindingDeactivation<T>,
   ): void
 
@@ -179,23 +222,26 @@ export interface IContainer {
    * Check if a service identifier is bound.
    *
    * @param serviceIdentifier - The service identifier to check
+   * @returns True if the service identifier is bound, false otherwise
    */
-  isBound(serviceIdentifier: interfaces.ServiceIdentifier<unknown>): boolean
+  isBound(serviceIdentifier: ServiceIdentifier<unknown>): boolean
 
   /**
    * Check if a service identifier is bound in the current container (not in ancestors).
    *
    * @param serviceIdentifier - The service identifier to check
+   * @returns True if the service identifier is bound in the current container, false otherwise
    */
-  isCurrentBound<T>(serviceIdentifier: interfaces.ServiceIdentifier<T>): boolean
+  isCurrentBound<T>(serviceIdentifier: ServiceIdentifier<T>): boolean
 
   /**
    * Check if a named binding is bound.
    *
    * @param serviceIdentifier - The service identifier to check
    * @param named - The name to check
+   * @returns True if the named binding is bound, false otherwise
    */
-  isBoundNamed(serviceIdentifier: interfaces.ServiceIdentifier<any>, named: string | number | symbol): boolean
+  isBoundNamed(serviceIdentifier: ServiceIdentifier<any>, named: string | number | symbol): boolean
 
   /**
    * Check if a tagged binding is bound.
@@ -203,9 +249,10 @@ export interface IContainer {
    * @param serviceIdentifier - The service identifier to check
    * @param key - The tag key
    * @param value - The tag value
+   * @returns True if the tagged binding is bound, false otherwise
    */
   isBoundTagged(
-    serviceIdentifier: interfaces.ServiceIdentifier<any>,
+    serviceIdentifier: ServiceIdentifier<any>,
     key: string | number | symbol,
     value: unknown,
   ): boolean
@@ -224,6 +271,7 @@ export interface IContainer {
    * Create a child container.
    *
    * @param containerOptions - The container options
+   * @returns A new child container
    */
   createChild(containerOptions?: interfaces.ContainerOptions): IContainer
 
@@ -233,14 +281,16 @@ export interface IContainer {
    * @param abstract - The abstract type to resolve
    * @param parameters - Optional parameters to pass to the constructor
    */
-  make<T>(abstract: string, parameters?: any[]): T
+  make<T>(abstract: ServiceIdentifier<T>, parameters?: any[]): T
 
   /**
    * Resolve the given type from the container asynchronously.
    *
    * @param abstract - The abstract type to resolve
+   * @returns A promise that resolves to the resolved instance
+   * @template T - The type of the resolved instance
    */
-  makeAsync<T>(abstract: string): Promise<T>
+  makeAsync<T>(abstract: ServiceIdentifier<T>): Promise<T>
 
   /**
    * Resolve a tagged binding from the container.
@@ -248,8 +298,10 @@ export interface IContainer {
    * @param abstract - The abstract type to resolve
    * @param tag - The tag name
    * @param value - The tag value
+   * @returns The resolved instance
+   * @template T - The type of the resolved instance
    */
-  makeTagged<T>(abstract: string, tag: string, value: any): T
+  makeTagged<T>(abstract: ServiceIdentifier<T>, tag: string, value: any): T
 
   /**
    * Resolve a tagged binding from the container asynchronously.
@@ -257,38 +309,48 @@ export interface IContainer {
    * @param abstract - The abstract type to resolve
    * @param tag - The tag name
    * @param value - The tag value
+   * @returns A promise that resolves to the resolved instance
+   * @template T - The type of the resolved instance
    */
-  makeTaggedAsync<T>(abstract: string, tag: string, value: any): Promise<T>
+  makeTaggedAsync<T>(abstract: ServiceIdentifier<T>, tag: string, value: any): Promise<T>
 
   /**
    * Resolve a named binding from the container.
    *
    * @param abstract - The abstract type to resolve
    * @param named - The name
+   * @returns The resolved instance
+   * @template T - The type of the resolved instance
    */
-  makeNamed<T>(abstract: string, named: string | number | symbol): T
+  makeNamed<T>(abstract: ServiceIdentifier<T>, named: string | number | symbol): T
 
   /**
    * Resolve a named binding from the container asynchronously.
    *
    * @param abstract - The abstract type to resolve
    * @param named - The name
+   * @returns A promise that resolves to the resolved instance
+   * @template T - The type of the resolved instance
    */
-  makeNamedAsync<T>(abstract: string, named: string | number | symbol): Promise<T>
+  makeNamedAsync<T>(abstract: ServiceIdentifier<T>, named: string | number | symbol): Promise<T>
 
   /**
    * Resolve all bindings for a service identifier.
    *
    * @param abstract - The abstract type to resolve
+   * @returns All resolved instances
+   * @template T - The type of the resolved instances
    */
-  makeAll<T>(abstract: string): T[]
+  makeAll<T>(abstract: ServiceIdentifier<T>): T[]
 
   /**
    * Resolve all bindings for a service identifier asynchronously.
    *
    * @param abstract - The abstract type to resolve
+   * @returns A promise that resolves to all resolved instances
+   * @template T - The type of the resolved instances
    */
-  makeAllAsync<T>(abstract: string): Promise<T[]>
+  makeAllAsync<T>(abstract: ServiceIdentifier<T>): Promise<T[]>
 
   /**
    * Resolve all tagged bindings for a service identifier.
@@ -296,8 +358,10 @@ export interface IContainer {
    * @param abstract - The abstract type to resolve
    * @param tag - The tag name
    * @param value - The tag value
+   * @returns All resolved instances
+   * @template T - The type of the resolved instances
    */
-  makeAllTagged<T>(abstract: string, tag: string, value: any): T[]
+  makeAllTagged<T>(abstract: ServiceIdentifier<T>, tag: string, value: any): T[]
 
   /**
    * Resolve all tagged bindings for a service identifier asynchronously.
@@ -305,29 +369,40 @@ export interface IContainer {
    * @param abstract - The abstract type to resolve
    * @param tag - The tag name
    * @param value - The tag value
+   * @returns A promise that resolves to all resolved instances
+   * @template T - The type of the resolved instances
    */
-  makeAllTaggedAsync<T>(abstract: string, tag: string, value: any): Promise<T[]>
+  makeAllTaggedAsync<T>(abstract: ServiceIdentifier<T>, tag: string, value: any): Promise<T[]>
 
   /**
    * Resolve all named bindings for a service identifier.
    *
    * @param abstract - The abstract type to resolve
    * @param named - The name
+   * @returns All resolved instances
+   * @template T - The type of the resolved instances
    */
-  makeAllNamed<T>(abstract: string, named: string | number | symbol): T[]
+  makeAllNamed<T>(abstract: ServiceIdentifier<T>, named: string | number | symbol): T[]
 
   /**
    * Resolve all named bindings for a service identifier asynchronously.
    *
    * @param abstract - The abstract type to resolve
    * @param named - The name
+   * @returns A promise that resolves to all resolved instances
+   * @template T - The type of the resolved instances
    */
-  makeAllNamedAsync<T>(abstract: string, named: string | number | symbol): Promise<T[]>
+  makeAllNamedAsync<T>(
+    abstract: ServiceIdentifier<T>,
+    named: string | number | symbol,
+  ): Promise<T[]>
 
   /**
    * Resolve a class constructor.
    *
    * @param constructorFunction - The constructor function to resolve
+   * @returns The resolved instance
+   * @template T - The type of the resolved instance
    */
   resolve<T>(constructorFunction: interfaces.Newable<T>): T
 
@@ -335,11 +410,14 @@ export interface IContainer {
    * Register a service provider with the container.
    *
    * @param provider - The service provider to register
+   * @returns The container instance
    */
   register(provider: IServiceProvider): IContainer
 
   /**
    * Boot the registered service providers.
+   *
+   * @returns The container instance
    */
   boot(): IContainer
 
@@ -347,6 +425,8 @@ export interface IContainer {
    * Call the given callback with the container instance.
    *
    * @param callback - The callback to call
+   * @returns The result of the callback
+   * @template T - The return type of the callback
    */
   call<T>(callback: (container: IContainer) => T): T
 }
@@ -358,5 +438,5 @@ export namespace IContainer {
   /**
    * Symbol for injecting the container service
    */
-  export const $ = Symbol.for("IContainer")
+  export const $ = Symbol.for('IContainer')
 }
