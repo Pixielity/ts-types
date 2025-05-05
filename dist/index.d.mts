@@ -74,6 +74,8 @@ export { ConfigEnvironment } from './enums/config-enviroment.enum.mjs';
 export { ParamType } from './enums/param-type.enum.mjs';
 export { QuestionType } from './enums/question-type.enum.mjs';
 export { HttpMethod } from './types/http-method.type.mjs';
+export { Newable } from './types/newable.type.mjs';
+export { ServiceIdentifier } from './types/service-identifier.type.mjs';
 import 'inversify';
 import 'class-validator';
 import 'rxjs';
