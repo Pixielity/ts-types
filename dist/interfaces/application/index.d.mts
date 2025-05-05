@@ -1,6 +1,11 @@
 export { IApplication } from './application.interface.mjs';
 export { I as IServiceProvider } from '../../service-provider.inteface-zpr0Rznj.mjs';
 import 'inversify';
+import '../cache/cache.interface.mjs';
+import '../cache/lock.interface.mjs';
 import '../../types/service-identifier.type.mjs';
 import '../../types/newable.type.mjs';
 import '../abstract.interface.mjs';
+import '../config/repository.interface.mjs';
+import '../config/schema.interface.mjs';
+import '../../enums/config-enviroment.enum.mjs';

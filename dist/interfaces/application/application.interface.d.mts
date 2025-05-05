@@ -1,15 +1,20 @@
 import { interfaces } from 'inversify';
+import { ICache } from '../cache/cache.interface.mjs';
 import { ServiceIdentifier } from '../../types/service-identifier.type.mjs';
 import { a as IContainer } from '../../service-provider.inteface-zpr0Rznj.mjs';
+import { IConfigRepository } from '../config/repository.interface.mjs';
+import '../cache/lock.interface.mjs';
 import '../../types/newable.type.mjs';
 import '../abstract.interface.mjs';
+import '../config/schema.interface.mjs';
+import '../../enums/config-enviroment.enum.mjs';
 
 /**
  * Interface for the application
  */
 interface IApplication {
     /**
-     * Get the service container.
+     * Get the service container instance.
      */
     getContainer(): IContainer;
     /**
@@ -18,12 +23,10 @@ interface IApplication {
     registerCoreProviders(): IApplication;
     /**
      * Register a service provider.
-     *
-     * @param provider - The service provider to register
      */
     register(provider: any): IApplication;
     /**
-     * Boot the application.
+     * Boot the application and all service providers.
      */
     boot(): IApplication;
     /**
@@ -31,27 +34,25 @@ interface IApplication {
      */
     isBooted(): boolean;
     /**
-     * Get a service from the container.
-     *
-     * @param abstract - The abstract type to resolve
+     * Resolve a service from the container.
      */
     make<T>(abstract: ServiceIdentifier<T>): T;
     /**
      * Register a binding with the container.
-     *
-     * @param abstract - The abstract type to bind
-     * @param concrete - The concrete implementation
-     * @param shared - Whether the binding should be shared
      */
-    bind<T>(abstract: string | ServiceIdentifier<T>, concrete?: any, shared?: boolean): IContainer | interfaces.BindingToSyntax<T>;
+    bind<T>(abstract: ServiceIdentifier<T>, concrete?: any, shared?: boolean): IContainer | interfaces.BindingToSyntax<T>;
     /**
-     * Register an existing instance as shared in the container.
-     *
-     * @param abstract - The abstract type to bind
-     * @param instance - The instance to register
-     * @returns The container instance
+     * Register an existing instance in the container.
      */
     instance<T>(abstract: ServiceIdentifier<T>, instance: T): IContainer;
+    /**
+     * Get the configuration repository.
+     */
+    config(): IConfigRepository;
+    /**
+     * Get the cache manager instance.
+     */
+    cache(): ICache;
 }
 /**
  * Namespace containing symbols for dependency injection

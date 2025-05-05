@@ -1,10 +1,15 @@
 import { ReactNode } from 'react';
 import { IApplication } from '../application/application.interface.js';
 import 'inversify';
+import '../cache/cache.interface.js';
+import '../cache/lock.interface.js';
 import '../../types/service-identifier.type.js';
 import '../../types/newable.type.js';
 import '../abstract.interface.js';
 import '../../service-provider.inteface-clcQqhXg.js';
+import '../config/repository.interface.js';
+import '../config/schema.interface.js';
+import '../../enums/config-enviroment.enum.js';
 
 /**
  * Props for the AppProvider component
