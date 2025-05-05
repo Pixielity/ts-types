@@ -39,7 +39,7 @@ export interface IApplication {
    *
    * @param abstract - The abstract type to resolve
    */
-  make<T>(abstract: string): T
+  make<T>(abstract: ServiceIdentifier<T>): T
 
   /**
    * Register a binding with the container.
