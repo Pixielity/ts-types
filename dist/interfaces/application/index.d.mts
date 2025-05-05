@@ -1,6 +1,5 @@
 export { IApplication } from './application.interface.mjs';
-export { IServiceProvider } from './service-provider.inteface.mjs';
-import '../../index-BPvk6K5t.mjs';
+export { I as IServiceProvider } from '../../service-provider.inteface-zpr0Rznj.mjs';
 import 'inversify';
 import '../../types/service-identifier.type.mjs';
 import '../../types/newable.type.mjs';

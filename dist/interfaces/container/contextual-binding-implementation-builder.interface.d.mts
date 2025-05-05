@@ -1,6 +1,5 @@
-export { a as IContextualBindingImplementationBuilder } from '../../index-BPvk6K5t.mjs';
+export { b as IContextualBindingImplementationBuilder } from '../../service-provider.inteface-zpr0Rznj.mjs';
 import 'inversify';
-import '../application/service-provider.inteface.mjs';
 import '../../types/service-identifier.type.mjs';
 import '../../types/newable.type.mjs';
 import '../abstract.interface.mjs';

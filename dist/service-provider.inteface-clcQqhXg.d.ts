@@ -1,6 +1,5 @@
 import { Container, interfaces } from 'inversify';
-import { IServiceProvider } from './interfaces/application/service-provider.inteface.mjs';
-import { ServiceIdentifier } from './types/service-identifier.type.mjs';
+import { ServiceIdentifier } from './types/service-identifier.type.js';
 
 /**
  * Interface for the contextual binding implementation builder
@@ -452,4 +451,61 @@ declare namespace IContainer {
     const $: unique symbol;
 }
 
-export { IContainer as I, IContextualBindingImplementationBuilder as a, IContextualBindingBuilder as b, IContextualBindingBuilderFactory as c };
+/**
+ * Interface for service providers.
+ * Service providers are responsible for binding services into the container
+ * and bootstrapping any dependencies.
+ *
+ * @example
+ * \`\`\`typescript
+ * class CacheServiceProvider implements IServiceProvider {
+ *   protected app: Container;
+ *
+ *   constructor(app: Container) {
+ *     this.app = app;
+ *   }
+ *
+ *   register(): void {
+ *     this.app.singleton('cache', () => {
+ *       return new CacheManager(this.app);
+ *     });
+ *   }
+ *
+ *   boot(): void {
+ *     // Bootstrap the cache service
+ *   }
+ * }
+ * \`\`\`
+ */ interface IServiceProvider {
+    /**
+     * The application container instance.
+     */
+    readonly app: IContainer;
+    /**
+     * Register any application services.
+     */
+    register(): void;
+    /**
+     * Bootstrap any application services (optional).
+     */
+    boot?(): void;
+    /**
+     * Clean up services before shutdown (optional).
+     */
+    terminate?(): void;
+    /**
+     * Publish files or configurations (optional).
+     */
+    publish?(): void;
+}
+/**
+ * Namespace containing symbols for dependency injection
+ */
+declare namespace IServiceProvider {
+    /**
+     * Symbol for injecting the service provider
+     */
+    const $: unique symbol;
+}
+
+export { IServiceProvider as I, IContainer as a, IContextualBindingImplementationBuilder as b, IContextualBindingBuilder as c, IContextualBindingBuilderFactory as d };

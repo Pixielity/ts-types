@@ -1,11 +1,10 @@
 import { ReactNode } from 'react';
 import { IApplication } from '../application/application.interface.mjs';
-import '../../index-BPvk6K5t.mjs';
 import 'inversify';
-import '../application/service-provider.inteface.mjs';
 import '../../types/service-identifier.type.mjs';
 import '../../types/newable.type.mjs';
 import '../abstract.interface.mjs';
+import '../../service-provider.inteface-zpr0Rznj.mjs';
 
 /**
  * Props for the AppProvider component

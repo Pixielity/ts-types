@@ -1,7 +1,6 @@
-import { I as IContainer } from '../../index-BPvk6K5t.mjs';
-import './service-provider.inteface.mjs';
-import 'inversify';
-import '../../types/service-identifier.type.mjs';
+import { interfaces } from 'inversify';
+import { ServiceIdentifier } from '../../types/service-identifier.type.mjs';
+import { a as IContainer } from '../../service-provider.inteface-zpr0Rznj.mjs';
 import '../../types/newable.type.mjs';
 import '../abstract.interface.mjs';
 
@@ -37,6 +36,22 @@ interface IApplication {
      * @param abstract - The abstract type to resolve
      */
     make<T>(abstract: string): T;
+    /**
+     * Register a binding with the container.
+     *
+     * @param abstract - The abstract type to bind
+     * @param concrete - The concrete implementation
+     * @param shared - Whether the binding should be shared
+     */
+    bind<T>(abstract: string | ServiceIdentifier<T>, concrete?: any, shared?: boolean): IContainer | interfaces.BindingToSyntax<T>;
+    /**
+     * Register an existing instance as shared in the container.
+     *
+     * @param abstract - The abstract type to bind
+     * @param instance - The instance to register
+     * @returns The container instance
+     */
+    instance<T>(abstract: ServiceIdentifier<T>, instance: T): IContainer;
 }
 /**
  * Namespace containing symbols for dependency injection

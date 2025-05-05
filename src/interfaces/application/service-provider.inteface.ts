@@ -1,3 +1,5 @@
+import { IContainer } from '../container'
+
 /**
  * Interface for service providers.
  * Service providers are responsible for binding services into the container
@@ -23,20 +25,31 @@
  *   }
  * }
  * \`\`\`
- */
-export interface IServiceProvider {
+ */ export interface IServiceProvider {
+  /**
+   * The application container instance.
+   */
+  readonly app: IContainer
+
   /**
    * Register any application services.
-   * This method is called when the service provider is registered with the container.
    */
   register(): void
 
   /**
-   * Bootstrap any application services.
-   * This method is called after all service providers have been registered.
-   * This method is optional and may not be implemented by all service providers.
+   * Bootstrap any application services (optional).
    */
   boot?(): void
+
+  /**
+   * Clean up services before shutdown (optional).
+   */
+  terminate?(): void
+
+  /**
+   * Publish files or configurations (optional).
+   */
+  publish?(): void
 }
 
 /**
@@ -46,5 +59,5 @@ export namespace IServiceProvider {
   /**
    * Symbol for injecting the service provider
    */
-  export const $ = Symbol.for("IServiceProvider")
+  export const $ = Symbol.for('IServiceProvider')
 }

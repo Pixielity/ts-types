@@ -1,5 +1,5 @@
 export { IApplication } from './interfaces/application/application.interface.mjs';
-export { IServiceProvider } from './interfaces/application/service-provider.inteface.mjs';
+export { a as IContainer, I as IServiceProvider } from './service-provider.inteface-zpr0Rznj.mjs';
 export { ICache } from './interfaces/cache/cache.interface.mjs';
 export { IStore } from './interfaces/cache/store.interface.mjs';
 export { IRepository } from './interfaces/cache/repository.interface.mjs';
@@ -17,7 +17,6 @@ export { IConfigSchema } from './interfaces/config/schema.interface.mjs';
 export { IConfigLoader } from './interfaces/config/loader.interface.mjs';
 export { IConfigOptions } from './interfaces/config/decorator-options.interface.mjs';
 export { IConfig } from './interfaces/config/config.interface.mjs';
-export { I as IContainer } from './index-BPvk6K5t.mjs';
 export { IClassDecoratorOptions } from './interfaces/decorators/class-decorator-options.interface.mjs';
 export { ILogOptions } from './interfaces/decorators/log-options.interface.mjs';
 export { IValidationFunction } from './interfaces/decorators/validation-function.interface.mjs';

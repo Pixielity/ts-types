@@ -1,6 +1,5 @@
-export { I as IContainer } from '../../index-BKV0HewX.js';
+export { a as IContainer } from '../../service-provider.inteface-clcQqhXg.js';
 import 'inversify';
-import '../application/service-provider.inteface.js';
 import '../../types/service-identifier.type.js';
 import '../../types/newable.type.js';
 import '../abstract.interface.js';
