@@ -1,16 +1,16 @@
-export { IAppProviderProps } from './app-provider-props.interface.js'
-export { IContainerProviderProps } from './container-provider-props.interface.js'
-export { ICachedDataResult } from './cached-data-result.interface.js'
-export { ICacheValueResult } from './cache-value-result.interface.js'
-import 'react'
-import '../application/application.interface.js'
-import 'inversify'
-import '../cache/cache.interface.js'
-import '../cache/lock.interface.js'
-import '../../types/service-identifier.type.js'
-import '../../types/newable.type.js'
-import '../abstract.interface.js'
-import '../../service-provider.inteface-clcQqhXg.js'
-import '../config/repository.interface.js'
-import '../config/schema.interface.js'
-import '../../enums/config-enviroment.enum.js'
+export { IAppProviderProps } from './app-provider-props.interface.js';
+export { IContainerProviderProps } from './container-provider-props.interface.js';
+export { ICachedDataResult } from './cached-data-result.interface.js';
+export { ICacheValueResult } from './cache-value-result.interface.js';
+import 'react';
+import '../application/application.interface.js';
+import 'inversify';
+import '../cache/cache.interface.js';
+import '../cache/lock.interface.js';
+import '../../types/service-identifier.type.js';
+import '../../types/newable.type.js';
+import '../abstract.interface.js';
+import '../../service-provider.inteface-clcQqhXg.js';
+import '../config/repository.interface.js';
+import '../config/schema.interface.js';
+import '../../enums/config-enviroment.enum.js';

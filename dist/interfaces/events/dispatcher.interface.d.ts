@@ -1,5 +1,5 @@
-import 'rxjs'
-import './event.interface.js'
-import './listener.interface.js'
-export { I as IEventDispatcher } from '../../dispatcher.interface-Cj1ehbOd.js'
-import './event-data.interface.js'
+import 'rxjs';
+import './event.interface.js';
+import './listener.interface.js';
+export { I as IEventDispatcher } from '../../dispatcher.interface-Cj1ehbOd.js';
+import './event-data.interface.js';

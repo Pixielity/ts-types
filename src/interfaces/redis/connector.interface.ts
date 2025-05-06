@@ -2,53 +2,22 @@ import type { IRedisConnection } from './connection.interface'
 
 /**
  * Redis connector interface
- * Responsible for establishing connections to Redis servers and clusters
+ * Defines the standard methods that all Redis connectors must implement
  */
 export interface IRedisConnector {
   /**
-   * Create a connection to a Redis instance
+   * Create a Redis client connection
    * @param config - The connection configuration
-   * @param options - Additional connection options
    * @returns A Redis connection instance
-   *
-   * @example
-   * ```typescript
-   * const connection = connector.connect({
-   *   host: 'localhost',
-   *   port: 6379,
-   *   password: 'secret'
-   * }, {
-   *   retryStrategy: (times) => Math.min(times * 50, 2000)
-   * });
-   * ```
    */
-  connect(config: Record<string, any>, options: Record<string, any>): IRedisConnection
+  createClient(config: Record<string, any>): IRedisConnection
 
   /**
-   * Create a connection to a Redis cluster
-   * @param config - The cluster nodes configuration
-   * @param clusterOptions - Cluster-specific options
-   * @param options - Additional connection options
+   * Create a Redis cluster connection
+   * @param config - The connection configuration
    * @returns A Redis connection instance
-   *
-   * @example
-   * ```typescript
-   * const clusterConnection = connector.connectToCluster([
-   *   { host: 'redis-1', port: 6379 },
-   *   { host: 'redis-2', port: 6379 },
-   *   { host: 'redis-3', port: 6379 }
-   * ], {
-   *   scaleReads: 'all'
-   * }, {
-   *   maxRedirections: 16
-   * });
-   * ```
    */
-  connectToCluster(
-    config: Record<string, any>[],
-    clusterOptions: Record<string, any>,
-    options: Record<string, any>,
-  ): IRedisConnection
+  createCluster(config: Record<string, any>): IRedisConnection
 }
 
 /**

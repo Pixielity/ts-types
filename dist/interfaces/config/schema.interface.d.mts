@@ -6,7 +6,7 @@ interface IConfigSchema {
     /**
      * The expected type of the configuration value
      */
-    type?: "string" | "number" | "integer" | "boolean" | "array" | "object" | "null";
+    type?: 'string' | 'number' | 'integer' | 'boolean' | 'array' | 'object' | 'null';
     /**
      * Whether the value is required
      * @default false

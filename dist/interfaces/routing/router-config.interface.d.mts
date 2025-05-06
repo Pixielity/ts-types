@@ -33,7 +33,7 @@ interface IRouterConfig {
      * The versioning strategy to use
      * @default "uri"
      */
-    versioningStrategy?: "uri" | "header" | "query";
+    versioningStrategy?: 'uri' | 'header' | 'query';
 }
 /**
  * Namespace containing symbols for dependency injection

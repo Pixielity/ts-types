@@ -7,7 +7,7 @@ interface ILogOptions {
      * The log level
      * @default "info"
      */
-    level?: "debug" | "info" | "warn" | "error";
+    level?: 'debug' | 'info' | 'warn' | 'error';
     /**
      * Whether to log method arguments
      * @default true

@@ -1,13 +1,13 @@
-export { IController } from './controller.interface.js'
-export { IControllerOptions } from './controller-options.interface.js'
-export { IRouteHandler } from './route.interface.js'
-export { IRouteOptions } from './route-options.interface.js'
-export { IMiddleware } from './middleware.interface.js'
-export { IGuard } from './guard.interface.js'
-export { IParamMetadata } from './param-metadata.interface.js'
-export { IRouterConfig } from './router-config.interface.js'
-export { IRouteDefinition } from './route-definition.interface.js'
-export { IControllerDefinition } from './controller-definition.interface.js'
-import 'next'
-import '../../enums/param-type.enum.js'
-import '../../types/http-method.type.js'
+export { IController } from './controller.interface.js';
+export { IControllerOptions } from './controller-options.interface.js';
+export { IRouteHandler } from './route.interface.js';
+export { IRouteOptions } from './route-options.interface.js';
+export { IMiddleware } from './middleware.interface.js';
+export { IGuard } from './guard.interface.js';
+export { IParamMetadata } from './param-metadata.interface.js';
+export { IRouterConfig } from './router-config.interface.js';
+export { IRouteDefinition } from './route-definition.interface.js';
+export { IControllerDefinition } from './controller-definition.interface.js';
+import 'next';
+import '../../enums/param-type.enum.js';
+import '../../types/http-method.type.js';
