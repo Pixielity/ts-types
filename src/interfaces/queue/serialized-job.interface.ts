@@ -1,7 +1,7 @@
 /**
  * Serialized job structure
  */
-export interface SerializedJob {
+export interface ISerializedJob {
   /**
    * The name of the job class
    */

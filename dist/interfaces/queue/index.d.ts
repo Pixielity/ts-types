@@ -6,5 +6,5 @@ export { IQueueManager } from './queue-manager.interface.js';
 export { IJobRegistry } from './job-registry.interface.js';
 export { IWorker } from './worker.interface.js';
 export { IRateLimiter } from './rate-limit.interface.js';
-export { SerializedJob } from './serialized-job.interface.js';
+export { ISerializedJob } from './serialized-job.interface.js';
 import '../../enums/worker-status.enum.js';

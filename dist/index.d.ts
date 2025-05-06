@@ -33,7 +33,7 @@ export { IQueueManager } from './interfaces/queue/queue-manager.interface.js';
 export { IJobRegistry } from './interfaces/queue/job-registry.interface.js';
 export { IWorker } from './interfaces/queue/worker.interface.js';
 export { IRateLimiter } from './interfaces/queue/rate-limit.interface.js';
-export { SerializedJob } from './interfaces/queue/serialized-job.interface.js';
+export { ISerializedJob } from './interfaces/queue/serialized-job.interface.js';
 export { IAppProviderProps } from './interfaces/react/app-provider-props.interface.js';
 export { IContainerProviderProps } from './interfaces/react/container-provider-props.interface.js';
 export { ICachedDataResult } from './interfaces/react/cached-data-result.interface.js';

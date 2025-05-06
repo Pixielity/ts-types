@@ -1,5 +1,12 @@
+import { IAsk } from './ask.interface.mjs';
 import { IInput } from './input.interface.mjs';
 import { IOutput } from './output.interface.mjs';
+import { IProgressBarFormat } from './progress-bar-format.interface.mjs';
+import { IProgressBar } from './progress-bar.interface.mjs';
+import { ITableOutput } from './table-output.interface.mjs';
+import { ITableStyle } from './table-style.interface.mjs';
+import './question.interface.mjs';
+import '../../enums/question-type.enum.mjs';
 
 /**
  * Interface for console command classes.
@@ -121,6 +128,26 @@ interface ICommand {
      * @param exitCode - The result from execute().
      */
     afterExecute(exitCode: number | void): Promise<void>;
+    /**
+     * Ask utility class
+     *
+     * @returns Ask utility class
+     */
+    ask(): IAsk;
+    /**
+     * Creates a new ProgressBar instance
+     *
+     * @param {number} total - The total value
+     * @param {IProgressBarFormat} format - The format options
+     */
+    progress(total: number, format?: IProgressBarFormat): IProgressBar;
+    /**
+     * Creates a new TableOutput instance
+     *
+     * @param {string[]} headers - The table headers
+     * @param {ITableStyle} style - The table style
+     */
+    table(headers: string[], style?: ITableStyle): ITableOutput;
 }
 /**
  * Namespace for ICommand interface

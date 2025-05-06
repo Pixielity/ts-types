@@ -1,5 +1,10 @@
+import { IAsk } from './ask.interface'
 import type { IInput } from './input.interface'
 import type { IOutput } from './output.interface'
+import { IProgressBarFormat } from './progress-bar-format.interface'
+import { IProgressBar } from './progress-bar.interface'
+import { ITableOutput } from './table-output.interface'
+import { ITableStyle } from './table-style.interface'
 
 /**
  * Interface for console command classes.
@@ -138,6 +143,29 @@ export interface ICommand {
    * @param exitCode - The result from execute().
    */
   afterExecute(exitCode: number | void): Promise<void>
+
+  /**
+   * Ask utility class
+   *
+   * @returns Ask utility class
+   */
+  ask(): IAsk
+
+  /**
+   * Creates a new ProgressBar instance
+   *
+   * @param {number} total - The total value
+   * @param {IProgressBarFormat} format - The format options
+   */
+  progress(total: number, format?: IProgressBarFormat): IProgressBar
+
+  /**
+   * Creates a new TableOutput instance
+   *
+   * @param {string[]} headers - The table headers
+   * @param {ITableStyle} style - The table style
+   */
+  table(headers: string[], style?: ITableStyle): ITableOutput
 }
 
 /**

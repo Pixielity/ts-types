@@ -1,7 +1,7 @@
 /**
  * Serialized job structure
  */
-interface SerializedJob {
+interface ISerializedJob {
     /**
      * The name of the job class
      */
@@ -12,4 +12,4 @@ interface SerializedJob {
     properties: Record<string, any>;
 }
 
-export type { SerializedJob };
+export type { ISerializedJob };

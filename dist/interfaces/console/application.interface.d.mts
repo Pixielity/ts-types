@@ -1,6 +1,13 @@
 import { ICommand } from './command.interface.mjs';
+import './ask.interface.mjs';
+import './question.interface.mjs';
+import '../../enums/question-type.enum.mjs';
 import './input.interface.mjs';
 import './output.interface.mjs';
+import './progress-bar-format.interface.mjs';
+import './progress-bar.interface.mjs';
+import './table-output.interface.mjs';
+import './table-style.interface.mjs';
 
 /**
  * Interface for the console application
