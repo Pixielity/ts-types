@@ -1,7 +1,7 @@
 import { interfaces } from 'inversify';
 import { ICache } from '../cache/cache.interface.js';
 import { ServiceIdentifier } from '../../types/service-identifier.type.js';
-import { a as IContainer } from '../../service-provider.inteface-clcQqhXg.js';
+import { a as IContainer } from '../../service-provider.inteface-C8J1v-i3.js';
 import { IConfigRepository } from '../config/repository.interface.js';
 import '../cache/lock.interface.js';
 import '../../types/newable.type.js';

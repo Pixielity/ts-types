@@ -429,6 +429,14 @@ export interface IContainer {
    * @template T - The return type of the callback
    */
   call<T>(callback: (container: IContainer) => T): T
+
+  /**
+   * Get all bindings registered in the container.
+   *
+   * @param serviceIdentifier - Optional service identifier to filter bindings
+   * @returns An array of bindings
+   */
+  getBindings(serviceIdentifier?: ServiceIdentifier<any>): interfaces.Binding<any>[]
 }
 
 /**

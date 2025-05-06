@@ -6,7 +6,7 @@ import '../cache/lock.interface.js';
 import '../../types/service-identifier.type.js';
 import '../../types/newable.type.js';
 import '../abstract.interface.js';
-import '../../service-provider.inteface-clcQqhXg.js';
+import '../../service-provider.inteface-C8J1v-i3.js';
 import '../config/repository.interface.js';
 import '../config/schema.interface.js';
 import '../../enums/config-enviroment.enum.js';

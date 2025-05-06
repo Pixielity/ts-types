@@ -1,5 +1,5 @@
 import { Container, interfaces } from 'inversify';
-import { ServiceIdentifier } from './types/service-identifier.type.mjs';
+import { ServiceIdentifier } from './types/service-identifier.type.js';
 
 /**
  * Interface for the contextual binding implementation builder
@@ -440,6 +440,13 @@ interface IContainer {
      * @template T - The return type of the callback
      */
     call<T>(callback: (container: IContainer) => T): T;
+    /**
+     * Get all bindings registered in the container.
+     *
+     * @param serviceIdentifier - Optional service identifier to filter bindings
+     * @returns An array of bindings
+     */
+    getBindings(serviceIdentifier?: ServiceIdentifier<any>): interfaces.Binding<any>[];
 }
 /**
  * Namespace containing symbols for dependency injection

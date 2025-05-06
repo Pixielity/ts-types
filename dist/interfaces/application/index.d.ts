@@ -1,5 +1,5 @@
 export { IApplication } from './application.interface.js';
-export { I as IServiceProvider } from '../../service-provider.inteface-clcQqhXg.js';
+export { I as IServiceProvider } from '../../service-provider.inteface-C8J1v-i3.js';
 import 'inversify';
 import '../cache/cache.interface.js';
 import '../cache/lock.interface.js';

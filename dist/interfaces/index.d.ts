@@ -1,5 +1,5 @@
 export { IApplication } from './application/application.interface.js';
-export { a as IContainer, I as IServiceProvider } from '../service-provider.inteface-clcQqhXg.js';
+export { a as IContainer, I as IServiceProvider } from '../service-provider.inteface-C8J1v-i3.js';
 export { ICache } from './cache/cache.interface.js';
 export { IStore } from './cache/store.interface.js';
 export { IRepository } from './cache/repository.interface.js';
