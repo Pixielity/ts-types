@@ -5,3 +5,4 @@ export { IQueueConnection } from './queue-connection.interface.js';
 export { IQueueManager } from './queue-manager.interface.js';
 export { IJobRegistry } from './job-registry.interface.js';
 export { IWorker } from './worker.interface.js';
+import '../../enums/worker-status.enum.js';

@@ -70,6 +70,7 @@ export { IRouteDefinition } from './routing/route-definition.interface.mjs';
 export { IControllerDefinition } from './routing/controller-definition.interface.mjs';
 export { Abstract } from './abstract.interface.mjs';
 import '../enums/config-enviroment.enum.mjs';
+import '../enums/worker-status.enum.mjs';
 import '../enums/param-type.enum.mjs';
 import '../enums/question-type.enum.mjs';
 import '../types/http-method.type.mjs';

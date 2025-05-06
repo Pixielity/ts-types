@@ -1,3 +1,5 @@
+import { WorkerStatus } from '../../enums/worker-status.enum.mjs';
+
 /**
  * Interface for queue workers.
  * Workers are responsible for processing jobs from a queue.
@@ -6,72 +8,60 @@ interface IWorker {
     /**
      * Start the worker.
      *
-     * @returns {Promise<void>}
+     * @returns Promise resolving when the worker is started
      */
     start(): Promise<void>;
     /**
      * Stop the worker.
      *
-     * @returns {Promise<void>}
+     * @returns Promise resolving when the worker is stopped
      */
     stop(): Promise<void>;
     /**
      * Process the next job on the queue.
      *
-     * @param {string} [queue] - The queue to process
-     * @returns {Promise<boolean>} True if a job was processed
+     * @param queue - The queue to process
+     * @returns Promise resolving to true if a job was processed
      */
     processNext(queue?: string): Promise<boolean>;
     /**
      * Get the current status of the worker.
      *
-     * @returns {string} The worker status
+     * @returns The worker status
      */
-    getStatus(): string;
+    getStatus(): WorkerStatus;
     /**
      * Set the maximum number of attempts for failed jobs.
      *
-     * @param {number} maxAttempts - The maximum number of attempts
+     * @param maxAttempts - The maximum number of attempts
      */
     setMaxAttempts(maxAttempts: number): void;
     /**
      * Set the timeout for jobs.
      *
-     * @param {number} timeout - The timeout in seconds
+     * @param timeout - The timeout in seconds
      */
     setTimeout(timeout: number): void;
     /**
      * Set the sleep time between polling the queue.
      *
-     * @param {number} sleep - The sleep time in seconds
+     * @param sleep - The sleep time in seconds
      */
     setSleep(sleep: number): void;
     /**
-     * Get the worker ID.
+     * Set the concurrency level.
      *
-     * @returns {string} The worker ID
+     * @param concurrency - The number of jobs to process concurrently
      */
-    getId(): string;
+    setConcurrency(concurrency: number): void;
     /**
-     * Get the number of jobs processed by this worker.
+     * Listen for worker events.
      *
-     * @returns {number} The number of jobs processed
+     * @param event - The event name
+     * @param callback - The callback function
+     * @returns A function to remove the listener
      */
-    getProcessedCount(): number;
-    /**
-     * Get the number of failed jobs.
-     *
-     * @returns {number} The number of failed jobs
-     */
-    getFailedCount(): number;
-    /**
-     * Register an event handler for worker events.
-     *
-     * @param {string} event - The event name
-     * @param {Function} handler - The event handler
-     * @returns {() => void} A function to remove the event handler
-     */
-    on(event: string, handler: Function): () => void;
+    on(event: string, callback: (data: any) => void): () => void;
 }
 /**
  * DI token for IWorker interface

@@ -18,6 +18,15 @@ var ConfigEnvironment = /* @__PURE__ */ ((ConfigEnvironment2) => {
   return ConfigEnvironment2;
 })(ConfigEnvironment || {});
 
+// src/enums/worker-status.enum.ts
+var WorkerStatus = /* @__PURE__ */ ((WorkerStatus2) => {
+  WorkerStatus2["IDLE"] = "idle";
+  WorkerStatus2["RUNNING"] = "running";
+  WorkerStatus2["PAUSED"] = "paused";
+  WorkerStatus2["STOPPED"] = "stopped";
+  return WorkerStatus2;
+})(WorkerStatus || {});
+
 // src/enums/param-type.enum.ts
 var ParamType = /* @__PURE__ */ ((ParamType2) => {
   ParamType2["PARAM"] = "param";
@@ -40,6 +49,6 @@ var QuestionType = /* @__PURE__ */ ((QuestionType2) => {
   return QuestionType2;
 })(QuestionType || {});
 
-export { ConfigEnvironment, ParamType, QuestionType };
+export { ConfigEnvironment, ParamType, QuestionType, WorkerStatus };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map

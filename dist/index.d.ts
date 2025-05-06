@@ -70,6 +70,7 @@ export { IRouteDefinition } from './interfaces/routing/route-definition.interfac
 export { IControllerDefinition } from './interfaces/routing/controller-definition.interface.js';
 export { Abstract } from './interfaces/abstract.interface.js';
 export { ConfigEnvironment } from './enums/config-enviroment.enum.js';
+export { WorkerStatus } from './enums/worker-status.enum.js';
 export { ParamType } from './enums/param-type.enum.js';
 export { QuestionType } from './enums/question-type.enum.js';
 export { HttpMethod } from './types/http-method.type.js';
