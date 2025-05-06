@@ -233,36 +233,6 @@ exports.ICacheValueResult = void 0;
   ICacheValueResult2.$ = Symbol.for("ICacheValueResult");
 })(exports.ICacheValueResult || (exports.ICacheValueResult = {}));
 
-// src/interfaces/console/application.interface.ts
-exports.IConsoleApplication = void 0;
-((IApplication3) => {
-  IApplication3.$ = Symbol("IApplication");
-})(exports.IConsoleApplication || (exports.IConsoleApplication = {}));
-
-// src/interfaces/console/command.interface.ts
-exports.ICommand = void 0;
-((ICommand2) => {
-  ICommand2.$ = Symbol("ICommand");
-})(exports.ICommand || (exports.ICommand = {}));
-
-// src/interfaces/console/command-registry.interface.ts
-exports.ICommandRegistry = void 0;
-((ICommandRegistry2) => {
-  ICommandRegistry2.$ = Symbol("ICommandRegistry");
-})(exports.ICommandRegistry || (exports.ICommandRegistry = {}));
-
-// src/interfaces/console/command-collector.interface.ts
-exports.ICommandCollector = void 0;
-((ICommandCollector2) => {
-  ICommandCollector2.$ = Symbol("ICommandCollector");
-})(exports.ICommandCollector || (exports.ICommandCollector = {}));
-
-// src/interfaces/console/command-scheduler.interface.ts
-exports.ICommandScheduler = void 0;
-((ICommandScheduler2) => {
-  ICommandScheduler2.$ = Symbol("ICommandScheduler");
-})(exports.ICommandScheduler || (exports.ICommandScheduler = {}));
-
 // src/interfaces/console/input.interface.ts
 exports.IInput = void 0;
 ((IInput2) => {
@@ -281,19 +251,43 @@ exports.IStubGenerator = void 0;
   IStubGenerator2.$ = Symbol("IStubGenerator");
 })(exports.IStubGenerator || (exports.IStubGenerator = {}));
 
-// src/interfaces/console/ask.interface.ts
-exports.IAsk = void 0;
-((IAsk2) => {
-  IAsk2.$ = Symbol("IAsk");
-})(exports.IAsk || (exports.IAsk = {}));
+// src/interfaces/console/application.interface.ts
+exports.IConsoleApplication = void 0;
+((IApplication3) => {
+  IApplication3.$ = Symbol("IApplication");
+})(exports.IConsoleApplication || (exports.IConsoleApplication = {}));
 
-// src/interfaces/console/table-output.interface.ts
+// src/interfaces/console/command/command.interface.ts
+exports.ICommand = void 0;
+((ICommand2) => {
+  ICommand2.$ = Symbol("ICommand");
+})(exports.ICommand || (exports.ICommand = {}));
+
+// src/interfaces/console/command/registry.interface.ts
+exports.ICommandRegistry = void 0;
+((ICommandRegistry2) => {
+  ICommandRegistry2.$ = Symbol("ICommandRegistry");
+})(exports.ICommandRegistry || (exports.ICommandRegistry = {}));
+
+// src/interfaces/console/command/collector.interface.ts
+exports.ICommandCollector = void 0;
+((ICommandCollector2) => {
+  ICommandCollector2.$ = Symbol("ICommandCollector");
+})(exports.ICommandCollector || (exports.ICommandCollector = {}));
+
+// src/interfaces/console/command/scheduler.interface.ts
+exports.ICommandScheduler = void 0;
+((ICommandScheduler2) => {
+  ICommandScheduler2.$ = Symbol("ICommandScheduler");
+})(exports.ICommandScheduler || (exports.ICommandScheduler = {}));
+
+// src/interfaces/console/ui/table-output.interface.ts
 exports.ITableOutput = void 0;
 ((ITableOutput2) => {
   ITableOutput2.$ = Symbol("ITableOutput");
 })(exports.ITableOutput || (exports.ITableOutput = {}));
 
-// src/interfaces/console/progress-bar.interface.ts
+// src/interfaces/console/ui/progress-bar.interface.ts
 exports.IProgressBar = void 0;
 ((IProgressBar2) => {
   IProgressBar2.$ = Symbol("IProgressBar");

@@ -1,23 +1,17 @@
 // Application interfaces
-export { IApplication as IConsoleApplication } from './application.interface'
-export * from './command.interface'
-export * from './command-shortcut.interface'
-export * from './command-options.interface'
-export * from './command-registry.interface'
-export * from './command-collector.interface'
-export * from './command-scheduler.interface'
 export * from './input.interface'
 export * from './output.interface'
 export * from './stub-generator.interface'
+export { IApplication as IConsoleApplication } from './application.interface'
+
+// Command interfaces
+export * from './command'
+
+// Decorator interfaces
+export * from './decorator'
 
 // UI interfaces
-export * from './ask.interface'
-export * from './question.interface'
-export * from './table-output.interface'
-export * from './table-style.interface'
-export * from './progress-bar.interface'
-export * from './progress-bar-format.interface'
+export * from './ui'
 
 // Scheduler interfaces
-export * from './schedule-expression.interface'
-export * from './scheduled-task.interface'
+export * from './schedule'

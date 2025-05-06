@@ -231,36 +231,6 @@ var ICacheValueResult;
   ICacheValueResult2.$ = Symbol.for("ICacheValueResult");
 })(ICacheValueResult || (ICacheValueResult = {}));
 
-// src/interfaces/console/application.interface.ts
-var IApplication2;
-((IApplication3) => {
-  IApplication3.$ = Symbol("IApplication");
-})(IApplication2 || (IApplication2 = {}));
-
-// src/interfaces/console/command.interface.ts
-var ICommand;
-((ICommand2) => {
-  ICommand2.$ = Symbol("ICommand");
-})(ICommand || (ICommand = {}));
-
-// src/interfaces/console/command-registry.interface.ts
-var ICommandRegistry;
-((ICommandRegistry2) => {
-  ICommandRegistry2.$ = Symbol("ICommandRegistry");
-})(ICommandRegistry || (ICommandRegistry = {}));
-
-// src/interfaces/console/command-collector.interface.ts
-var ICommandCollector;
-((ICommandCollector2) => {
-  ICommandCollector2.$ = Symbol("ICommandCollector");
-})(ICommandCollector || (ICommandCollector = {}));
-
-// src/interfaces/console/command-scheduler.interface.ts
-var ICommandScheduler;
-((ICommandScheduler2) => {
-  ICommandScheduler2.$ = Symbol("ICommandScheduler");
-})(ICommandScheduler || (ICommandScheduler = {}));
-
 // src/interfaces/console/input.interface.ts
 var IInput;
 ((IInput2) => {
@@ -279,19 +249,43 @@ var IStubGenerator;
   IStubGenerator2.$ = Symbol("IStubGenerator");
 })(IStubGenerator || (IStubGenerator = {}));
 
-// src/interfaces/console/ask.interface.ts
-var IAsk;
-((IAsk2) => {
-  IAsk2.$ = Symbol("IAsk");
-})(IAsk || (IAsk = {}));
+// src/interfaces/console/application.interface.ts
+var IApplication2;
+((IApplication3) => {
+  IApplication3.$ = Symbol("IApplication");
+})(IApplication2 || (IApplication2 = {}));
 
-// src/interfaces/console/table-output.interface.ts
+// src/interfaces/console/command/command.interface.ts
+var ICommand;
+((ICommand2) => {
+  ICommand2.$ = Symbol("ICommand");
+})(ICommand || (ICommand = {}));
+
+// src/interfaces/console/command/registry.interface.ts
+var ICommandRegistry;
+((ICommandRegistry2) => {
+  ICommandRegistry2.$ = Symbol("ICommandRegistry");
+})(ICommandRegistry || (ICommandRegistry = {}));
+
+// src/interfaces/console/command/collector.interface.ts
+var ICommandCollector;
+((ICommandCollector2) => {
+  ICommandCollector2.$ = Symbol("ICommandCollector");
+})(ICommandCollector || (ICommandCollector = {}));
+
+// src/interfaces/console/command/scheduler.interface.ts
+var ICommandScheduler;
+((ICommandScheduler2) => {
+  ICommandScheduler2.$ = Symbol("ICommandScheduler");
+})(ICommandScheduler || (ICommandScheduler = {}));
+
+// src/interfaces/console/ui/table-output.interface.ts
 var ITableOutput;
 ((ITableOutput2) => {
   ITableOutput2.$ = Symbol("ITableOutput");
 })(ITableOutput || (ITableOutput = {}));
 
-// src/interfaces/console/progress-bar.interface.ts
+// src/interfaces/console/ui/progress-bar.interface.ts
 var IProgressBar;
 ((IProgressBar2) => {
   IProgressBar2.$ = Symbol("IProgressBar");
@@ -381,6 +375,6 @@ var IControllerDefinition;
   IControllerDefinition2.$ = Symbol.for("IControllerDefinition");
 })(IControllerDefinition || (IControllerDefinition = {}));
 
-export { IAppProviderProps, IApplication, IAsk, ICache, ICacheItem, ICacheManager, ICacheValueResult, ICachedDataResult, IClassDecoratorOptions, ICommand, ICommandCollector, ICommandRegistry, ICommandScheduler, IConfig, IConfigCache, IConfigCacheOptions, IConfigLoader, IConfigOptions, IConfigRepositoryOptions, IApplication2 as IConsoleApplication, IContainer, IContainerProviderProps, IController, IControllerDefinition, IControllerOptions, IEvent, IEventBus, IEventDispatcher, IGuard, IInput, IJobRegistry, IListener, ILock, ILockProvider, ILogOptions, IMiddleware, IOutput, IParamMetadata, IProgressBar, IQueueConnection, IQueueManager, IQueueable, IRateLimiter, IRedis, IRedisConnection, IRedisConnector, IRedisFactory, IRepository, IRouteDefinition, IRouteHandler, IRouteOptions, IRouterConfig, IServiceProvider, IShouldQueue, IStore, IStubGenerator, ISubscriber, ITableOutput, ITaggedCache, IValidationFunction, IWorker };
+export { IAppProviderProps, IApplication, ICache, ICacheItem, ICacheManager, ICacheValueResult, ICachedDataResult, IClassDecoratorOptions, ICommand, ICommandCollector, ICommandRegistry, ICommandScheduler, IConfig, IConfigCache, IConfigCacheOptions, IConfigLoader, IConfigOptions, IConfigRepositoryOptions, IApplication2 as IConsoleApplication, IContainer, IContainerProviderProps, IController, IControllerDefinition, IControllerOptions, IEvent, IEventBus, IEventDispatcher, IGuard, IInput, IJobRegistry, IListener, ILock, ILockProvider, ILogOptions, IMiddleware, IOutput, IParamMetadata, IProgressBar, IQueueConnection, IQueueManager, IQueueable, IRateLimiter, IRedis, IRedisConnection, IRedisConnector, IRedisFactory, IRepository, IRouteDefinition, IRouteHandler, IRouteOptions, IRouterConfig, IServiceProvider, IShouldQueue, IStore, IStubGenerator, ISubscriber, ITableOutput, ITaggedCache, IValidationFunction, IWorker };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map

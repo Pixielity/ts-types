@@ -1,4 +1,4 @@
-import type { ICommand } from './command.interface'
+import type { ICommand } from './command/command.interface'
 
 /**
  * Interface for the console application
