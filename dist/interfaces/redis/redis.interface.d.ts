@@ -1,5 +1,5 @@
 declare namespace IRedis {
-    const $: unique symbol;
+  const $: unique symbol
 }
 
-export { IRedis };
+export { IRedis }

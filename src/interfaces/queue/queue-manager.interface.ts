@@ -1,5 +1,5 @@
-import type { IQueueConnection } from "./queue-connection.interface"
-import type { IQueueable } from "./queueable.interface"
+import type { IQueueConnection } from './queue-connection.interface'
+import type { IQueueable } from './queueable.interface'
 
 /**
  * Interface for the queue manager.
@@ -38,7 +38,12 @@ export interface IQueueManager {
    * @param {string} [queue] - The queue name
    * @returns {Promise<void>}
    */
-  push(job: IQueueable, data: any, connectionName?: string | null, queue?: string | null): Promise<void>
+  push(
+    job: IQueueable,
+    data: any,
+    connectionName?: string | null,
+    queue?: string | null,
+  ): Promise<void>
 
   /**
    * Push a new job onto the queue after a delay.
@@ -50,7 +55,13 @@ export interface IQueueManager {
    * @param {string} [queue] - The queue name
    * @returns {Promise<void>}
    */
-  later(delay: number, job: IQueueable, data: any, connectionName?: string | null, queue?: string | null): Promise<void>
+  later(
+    delay: number,
+    job: IQueueable,
+    data: any,
+    connectionName?: string | null,
+    queue?: string | null,
+  ): Promise<void>
 
   /**
    * Push an array of jobs onto the queue.
@@ -61,7 +72,12 @@ export interface IQueueManager {
    * @param {string} [queue] - The queue name
    * @returns {Promise<void>}
    */
-  bulk(jobs: IQueueable[], data: any, connectionName?: string | null, queue?: string | null): Promise<void>
+  bulk(
+    jobs: IQueueable[],
+    data: any,
+    connectionName?: string | null,
+    queue?: string | null,
+  ): Promise<void>
 
   /**
    * Release a job back onto the queue.
@@ -111,5 +127,5 @@ export interface IQueueManager {
  * DI token for IQueueManager interface
  */
 export namespace IQueueManager {
-  export const $ = Symbol.for("IQueueManager")
+  export const $ = Symbol.for('IQueueManager')
 }

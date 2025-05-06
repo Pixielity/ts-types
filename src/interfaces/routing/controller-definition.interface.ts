@@ -1,4 +1,4 @@
-import type { IRouteDefinition } from "./route-definition.interface"
+import type { IRouteDefinition } from './route-definition.interface'
 
 /**
  * Interface for controller definitions
@@ -43,5 +43,5 @@ export namespace IControllerDefinition {
   /**
    * Symbol for injecting the controller definition service
    */
-  export const $ = Symbol.for("IControllerDefinition")
+  export const $ = Symbol.for('IControllerDefinition')
 }

@@ -16,7 +16,10 @@ export interface IRedisConnection {
    * });
    * ```
    */
-  subscribe(channels: string | string[], callback: (message: string, channel: string) => void): Promise<void>
+  subscribe(
+    channels: string | string[],
+    callback: (message: string, channel: string) => void,
+  ): Promise<void>
 
   /**
    * Subscribe to one or more channels with wildcards
@@ -339,5 +342,5 @@ export interface IRedisConnection {
  * DI token for IRedisConnection interface
  */
 export namespace IRedisConnection {
-  export const $ = Symbol.for("IRedisConnection")
+  export const $ = Symbol.for('IRedisConnection')
 }

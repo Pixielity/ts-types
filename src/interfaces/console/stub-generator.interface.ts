@@ -32,5 +32,5 @@ export namespace IStubGenerator {
    * Token for the IStubGenerator interface
    * Used for dependency injection
    */
-  export const $ = Symbol("IStubGenerator")
+  export const $ = Symbol('IStubGenerator')
 }

@@ -1,5 +1,5 @@
-import type { ICommand } from "./command.interface"
-import type { IScheduleExpression } from "./schedule-expression.interface"
+import type { ICommand } from './command.interface'
+import type { IScheduleExpression } from './schedule-expression.interface'
 
 /**
  * Interface for scheduled task

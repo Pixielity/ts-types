@@ -1,4 +1,4 @@
-import type { IRedisConnection } from "./connection.interface"
+import type { IRedisConnection } from './connection.interface'
 
 /**
  * Redis connector interface
@@ -55,5 +55,5 @@ export interface IRedisConnector {
  * DI token for IRedisConnector interface
  */
 export namespace IRedisConnector {
-  export const $ = Symbol.for("IRedisConnector")
+  export const $ = Symbol.for('IRedisConnector')
 }

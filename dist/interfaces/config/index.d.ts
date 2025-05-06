@@ -1,11 +1,11 @@
-export { IConfigRepositoryOptions } from './repository-options.interface.js';
-export { IConfigRepository } from './repository.interface.js';
-export { IConfigCache } from './cache.interface.js';
-export { ICacheItem } from './cache-item.interface.js';
-export { IConfigCacheOptions } from './cache-options.interface.js';
-export { IConfigValidator } from './validator.interface.js';
-export { IConfigSchema } from './schema.interface.js';
-export { IConfigLoader } from './loader.interface.js';
-export { IConfigOptions } from './decorator-options.interface.js';
-export { IConfig } from './config.interface.js';
-import '../../enums/config-enviroment.enum.js';
+export { IConfigRepositoryOptions } from './repository-options.interface.js'
+export { IConfigRepository } from './repository.interface.js'
+export { IConfigCache } from './cache.interface.js'
+export { ICacheItem } from './cache-item.interface.js'
+export { IConfigCacheOptions } from './cache-options.interface.js'
+export { IConfigValidator } from './validator.interface.js'
+export { IConfigSchema } from './schema.interface.js'
+export { IConfigLoader } from './loader.interface.js'
+export { IConfigOptions } from './decorator-options.interface.js'
+export { IConfig } from './config.interface.js'
+import '../../enums/config-enviroment.enum.js'

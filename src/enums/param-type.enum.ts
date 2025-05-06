@@ -5,25 +5,25 @@ export enum ParamType {
   /**
    * Route parameter
    */
-  PARAM = "param",
+  PARAM = 'param',
 
   /**
    * Query parameter
    */
-  QUERY = "query",
+  QUERY = 'query',
 
   /**
    * Request body
    */
-  BODY = "body",
+  BODY = 'body',
 
   /**
    * Request object
    */
-  REQUEST = "request",
+  REQUEST = 'request',
 
   /**
    * Response object
    */
-  RESPONSE = "response",
+  RESPONSE = 'response',
 }

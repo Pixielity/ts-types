@@ -1,6 +1,6 @@
-import type { Observable } from "rxjs"
-import type { IEvent } from "./event.interface"
-import type { IEventData } from "./event-data.interface"
+import type { Observable } from 'rxjs'
+import type { IEvent } from './event.interface'
+import type { IEventData } from './event-data.interface'
 
 /**
  * Interface for the event bus
@@ -71,12 +71,15 @@ export interface IEventBus {
    * @param callback - The callback function
    * @returns A function to unregister the callback
    */
-  subscribeToEvent<T extends IEvent>(eventClass: new (...args: any[]) => T, callback: (event: T) => void): () => void
+  subscribeToEvent<T extends IEvent>(
+    eventClass: new (...args: any[]) => T,
+    callback: (event: T) => void,
+  ): () => void
 }
 
 /**
  * DI token for IEventBus interface
  */
 export namespace IEventBus {
-  export const $ = Symbol.for("IEventBus")
+  export const $ = Symbol.for('IEventBus')
 }

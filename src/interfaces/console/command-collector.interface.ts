@@ -1,4 +1,4 @@
-import type { ICommand } from "./command.interface"
+import type { ICommand } from './command.interface'
 
 /**
  * Interface for command collector
@@ -41,5 +41,5 @@ export namespace ICommandCollector {
    * Token for the ICommandCollector interface
    * Used for dependency injection
    */
-  export const $ = Symbol("ICommandCollector")
+  export const $ = Symbol('ICommandCollector')
 }

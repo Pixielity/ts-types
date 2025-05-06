@@ -7,35 +7,35 @@ export enum QuestionType {
   /**
    * Text input
    */
-  Input = "input",
+  Input = 'input',
 
   /**
    * Password input (masked)
    */
-  Password = "password",
+  Password = 'password',
 
   /**
    * Yes/no confirmation
    */
-  Confirm = "confirm",
+  Confirm = 'confirm',
 
   /**
    * Single selection from a list
    */
-  List = "list",
+  List = 'list',
 
   /**
    * Multiple selection from a list
    */
-  Checkbox = "checkbox",
+  Checkbox = 'checkbox',
 
   /**
    * Numeric input
    */
-  Number = "number",
+  Number = 'number',
 
   /**
    * Multi-line text editor
    */
-  Editor = "editor",
+  Editor = 'editor',
 }

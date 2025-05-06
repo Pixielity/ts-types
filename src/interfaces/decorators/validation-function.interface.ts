@@ -1,4 +1,4 @@
-import type { ValidationArguments } from "class-validator"
+import type { ValidationArguments } from 'class-validator'
 
 /**
  * Interface for validation function
@@ -22,5 +22,5 @@ export namespace IValidationFunction {
   /**
    * Symbol for injecting the validation function service
    */
-  export const $ = Symbol.for("IValidationFunction")
+  export const $ = Symbol.for('IValidationFunction')
 }

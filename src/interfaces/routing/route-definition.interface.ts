@@ -1,5 +1,5 @@
-import type { HttpMethod } from "../../types"
-import type { IParamMetadata } from "./param-metadata.interface"
+import type { HttpMethod } from '../../types'
+import type { IParamMetadata } from './param-metadata.interface'
 
 /**
  * Interface for route definitions
@@ -49,5 +49,5 @@ export namespace IRouteDefinition {
   /**
    * Symbol for injecting the route definition service
    */
-  export const $ = Symbol.for("IRouteDefinition")
+  export const $ = Symbol.for('IRouteDefinition')
 }

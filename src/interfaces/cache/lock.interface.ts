@@ -59,5 +59,5 @@ export namespace ILock {
   /**
    * Symbol for injecting the lock service
    */
-  export const $ = Symbol.for("ILock")
+  export const $ = Symbol.for('ILock')
 }

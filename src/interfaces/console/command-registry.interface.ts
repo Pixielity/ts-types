@@ -1,4 +1,4 @@
-import type { ICommand } from "./command.interface"
+import type { ICommand } from './command.interface'
 
 /**
  * Interface for the command registry
@@ -61,5 +61,5 @@ export namespace ICommandRegistry {
    * Token for the ICommandRegistry interface
    * Used for dependency injection
    */
-  export const $ = Symbol("ICommandRegistry")
+  export const $ = Symbol('ICommandRegistry')
 }

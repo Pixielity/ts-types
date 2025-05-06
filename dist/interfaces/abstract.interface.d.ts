@@ -1,5 +1,5 @@
 interface Abstract<T> {
-    prototype: T;
+  prototype: T
 }
 
-export type { Abstract };
+export type { Abstract }

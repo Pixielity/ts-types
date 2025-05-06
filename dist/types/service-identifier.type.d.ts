@@ -1,9 +1,9 @@
-import { Newable } from './newable.type.js';
-import { Abstract } from '../interfaces/abstract.interface.js';
+import { Newable } from './newable.type.js'
+import { Abstract } from '../interfaces/abstract.interface.js'
 
 /**
  * Service Identifier type
  */
-type ServiceIdentifier<T = unknown> = string | symbol | Newable<T> | Abstract<T>;
+type ServiceIdentifier<T = unknown> = string | symbol | Newable<T> | Abstract<T>
 
-export type { ServiceIdentifier };
+export type { ServiceIdentifier }

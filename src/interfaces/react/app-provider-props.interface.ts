@@ -1,5 +1,5 @@
-import type { ReactNode } from "react"
-import type { IApplication } from "../application"
+import type { ReactNode } from 'react'
+import type { IApplication } from '../application'
 
 /**
  * Props for the AppProvider component
@@ -30,5 +30,5 @@ export namespace IAppProviderProps {
   /**
    * Symbol for injecting the app provider props service
    */
-  export const $ = Symbol.for("IAppProviderProps")
+  export const $ = Symbol.for('IAppProviderProps')
 }

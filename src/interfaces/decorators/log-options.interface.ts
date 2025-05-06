@@ -7,7 +7,7 @@ export interface ILogOptions {
    * The log level
    * @default "info"
    */
-  level?: "debug" | "info" | "warn" | "error"
+  level?: 'debug' | 'info' | 'warn' | 'error'
 
   /**
    * Whether to log method arguments
@@ -53,5 +53,5 @@ export namespace ILogOptions {
   /**
    * Symbol for injecting the log options service
    */
-  export const $ = Symbol.for("ILogOptions")
+  export const $ = Symbol.for('ILogOptions')
 }

@@ -1,4 +1,4 @@
-import type { IEvent } from "./event.interface"
+import type { IEvent } from './event.interface'
 
 /**
  * Interface for all event listeners in the system.
@@ -19,5 +19,5 @@ export interface IListener<E extends IEvent = IEvent> {
  * DI token for IListener interface
  */
 export namespace IListener {
-  export const $ = Symbol.for("IListener")
+  export const $ = Symbol.for('IListener')
 }

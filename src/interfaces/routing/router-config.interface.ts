@@ -38,7 +38,7 @@ export interface IRouterConfig {
    * The versioning strategy to use
    * @default "uri"
    */
-  versioningStrategy?: "uri" | "header" | "query"
+  versioningStrategy?: 'uri' | 'header' | 'query'
 }
 
 /**
@@ -48,5 +48,5 @@ export namespace IRouterConfig {
   /**
    * Symbol for injecting the router config service
    */
-  export const $ = Symbol.for("IRouterConfig")
+  export const $ = Symbol.for('IRouterConfig')
 }

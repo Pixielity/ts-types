@@ -1,4 +1,4 @@
-import type { IQueueable } from "./queueable.interface"
+import type { IQueueable } from './queueable.interface'
 
 /**
  * Interface for job registry
@@ -73,5 +73,5 @@ export interface IJobRegistry {
  * DI token for IJobRegistry interface
  */
 export namespace IJobRegistry {
-  export const $ = Symbol.for("IJobRegistry")
+  export const $ = Symbol.for('IJobRegistry')
 }

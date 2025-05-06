@@ -1,5 +1,5 @@
-import type { ReactNode } from "react"
-import type { IContainer } from "../container"
+import type { ReactNode } from 'react'
+import type { IContainer } from '../container'
 
 /**
  * Props for the ContainerProvider component
@@ -30,5 +30,5 @@ export namespace IContainerProviderProps {
   /**
    * Symbol for injecting the container provider props service
    */
-  export const $ = Symbol.for("IContainerProviderProps")
+  export const $ = Symbol.for('IContainerProviderProps')
 }

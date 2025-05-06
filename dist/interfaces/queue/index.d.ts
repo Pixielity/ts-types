@@ -1,7 +1,7 @@
-export { IQueueable } from './queueable.interface.js';
-export { IShouldQueue } from './should-queue.interface.js';
-export { IJobOptions } from './job-options.interface.js';
-export { IQueueConnection } from './queue-connection.interface.js';
-export { IQueueManager } from './queue-manager.interface.js';
-export { IJobRegistry } from './job-registry.interface.js';
-export { IWorker } from './worker.interface.js';
+export { IQueueable } from './queueable.interface.js'
+export { IShouldQueue } from './should-queue.interface.js'
+export { IJobOptions } from './job-options.interface.js'
+export { IQueueConnection } from './queue-connection.interface.js'
+export { IQueueManager } from './queue-manager.interface.js'
+export { IJobRegistry } from './job-registry.interface.js'
+export { IWorker } from './worker.interface.js'

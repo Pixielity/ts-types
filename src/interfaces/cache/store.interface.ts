@@ -2,7 +2,7 @@
  * Interface for cache store implementations
  * Defines the contract that all cache storage drivers must implement
  */
-import type { ILockProvider } from "./lock-provider.interface"
+import type { ILockProvider } from './lock-provider.interface'
 
 export interface IStore {
   /**
@@ -98,40 +98,40 @@ export namespace IStore {
   /**
    * Symbol for injecting the store service
    */
-  export const $ = Symbol.for("IStore")
+  export const $ = Symbol.for('IStore')
 
   /**
    * Symbol for injecting the array store
    */
-  export const ArrayStore = Symbol.for("ArrayStore")
+  export const ArrayStore = Symbol.for('ArrayStore')
 
   /**
    * Symbol for injecting the file store
    */
-  export const FileStore = Symbol.for("FileStore")
+  export const FileStore = Symbol.for('FileStore')
 
   /**
    * Symbol for injecting the memcached store
    */
-  export const MemcachedStore = Symbol.for("MemcachedStore")
+  export const MemcachedStore = Symbol.for('MemcachedStore')
 
   /**
    * Symbol for injecting the redis store
    */
-  export const RedisStore = Symbol.for("RedisStore")
+  export const RedisStore = Symbol.for('RedisStore')
 
   /**
    * Symbol for injecting the dynamodb store
    */
-  export const DynamoDbStore = Symbol.for("DynamoDbStore")
+  export const DynamoDbStore = Symbol.for('DynamoDbStore')
 
   /**
    * Symbol for injecting the database store
    */
-  export const DatabaseStore = Symbol.for("DatabaseStore")
+  export const DatabaseStore = Symbol.for('DatabaseStore')
 
   /**
    * Symbol for injecting the null store
    */
-  export const NullStore = Symbol.for("NullStore")
+  export const NullStore = Symbol.for('NullStore')
 }

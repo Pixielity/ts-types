@@ -1,4 +1,4 @@
-import type { ILock } from "./lock.interface"
+import type { ILock } from './lock.interface'
 
 /**
  * Interface for lock providers
@@ -35,5 +35,5 @@ export namespace ILockProvider {
   /**
    * Symbol for injecting the lock provider service
    */
-  export const $ = Symbol.for("ILockProvider")
+  export const $ = Symbol.for('ILockProvider')
 }

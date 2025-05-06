@@ -1,4 +1,4 @@
-import type { IContainer } from "./container.interface"
+import type { IContainer } from './container.interface'
 
 /**
  * Interface for the contextual binding implementation builder
@@ -30,5 +30,5 @@ export namespace IContextualBindingImplementationBuilder {
   /**
    * Symbol for injecting the contextual binding implementation builder service
    */
-  export const $ = Symbol.for("IContextualBindingImplementationBuilder")
+  export const $ = Symbol.for('IContextualBindingImplementationBuilder')
 }

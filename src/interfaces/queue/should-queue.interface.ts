@@ -36,5 +36,5 @@ export interface IShouldQueue {
  * DI token for IShouldQueue interface
  */
 export namespace IShouldQueue {
-  export const $ = Symbol.for("IShouldQueue")
+  export const $ = Symbol.for('IShouldQueue')
 }

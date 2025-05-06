@@ -59,5 +59,5 @@ export namespace IClassDecoratorOptions {
   /**
    * Symbol for injecting the class decorator options service
    */
-  export const $ = Symbol.for("IClassDecoratorOptions")
+  export const $ = Symbol.for('IClassDecoratorOptions')
 }

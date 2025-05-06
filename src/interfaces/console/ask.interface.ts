@@ -1,4 +1,4 @@
-import type { IQuestion } from "./question.interface"
+import type { IQuestion } from './question.interface'
 
 /**
  * Interface for ask utility
@@ -48,7 +48,11 @@ export interface IAsk {
    * @param {any} defaultValue - The default value
    * @returns {Promise<any>} The selection
    */
-  select(message: string, choices: string[] | { name: string; value: any }[], defaultValue?: any): Promise<any>
+  select(
+    message: string,
+    choices: string[] | { name: string; value: any }[],
+    defaultValue?: any,
+  ): Promise<any>
 
   /**
    * Asks for multiple selections from a list
@@ -58,7 +62,11 @@ export interface IAsk {
    * @param {any[]} defaultValue - The default values
    * @returns {Promise<any[]>} The selections
    */
-  multiSelect(message: string, choices: string[] | { name: string; value: any }[], defaultValue?: any[]): Promise<any[]>
+  multiSelect(
+    message: string,
+    choices: string[] | { name: string; value: any }[],
+    defaultValue?: any[],
+  ): Promise<any[]>
 
   /**
    * Asks for a password
@@ -79,5 +87,5 @@ export namespace IAsk {
    * Token for the IAsk interface
    * Used for dependency injection
    */
-  export const $ = Symbol("IAsk")
+  export const $ = Symbol('IAsk')
 }

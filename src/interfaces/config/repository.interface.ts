@@ -1,5 +1,5 @@
-import type { IConfigSchema } from "./schema.interface"
-import type { ConfigEnvironment } from "../../enums/config-enviroment.enum"
+import type { IConfigSchema } from './schema.interface'
+import type { ConfigEnvironment } from '../../enums/config-enviroment.enum'
 
 /**
  * Interface for the configuration repository

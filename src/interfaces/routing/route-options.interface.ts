@@ -40,5 +40,5 @@ export namespace IRouteOptions {
   /**
    * Symbol for injecting the route options service
    */
-  export const $ = Symbol.for("IRouteOptions")
+  export const $ = Symbol.for('IRouteOptions')
 }

@@ -70,5 +70,5 @@ export namespace IConfigCache {
   /**
    * Symbol for injecting the config cache service
    */
-  export const $ = Symbol.for("IConfigCache")
+  export const $ = Symbol.for('IConfigCache')
 }

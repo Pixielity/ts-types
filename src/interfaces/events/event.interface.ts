@@ -33,5 +33,5 @@ export interface IEvent {
  * DI token for IEvent interface
  */
 export namespace IEvent {
-  export const $ = Symbol.for("IEvent")
+  export const $ = Symbol.for('IEvent')
 }

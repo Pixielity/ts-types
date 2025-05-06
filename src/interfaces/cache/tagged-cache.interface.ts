@@ -1,4 +1,4 @@
-import type { ICache } from "./cache.interface"
+import type { ICache } from './cache.interface'
 
 /**
  * Interface for tagged cache
@@ -30,5 +30,5 @@ export namespace ITaggedCache {
   /**
    * Symbol for injecting the tagged cache service
    */
-  export const $ = Symbol.for("ITaggedCache")
+  export const $ = Symbol.for('ITaggedCache')
 }

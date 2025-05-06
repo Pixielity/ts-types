@@ -17,5 +17,5 @@ export namespace IController {
   /**
    * Symbol for injecting the controller service
    */
-  export const $ = Symbol.for("IController")
+  export const $ = Symbol.for('IController')
 }

@@ -60,5 +60,5 @@ export namespace IInput {
    * Token for the IInput interface
    * Used for dependency injection
    */
-  export const $ = Symbol("IInput")
+  export const $ = Symbol('IInput')
 }

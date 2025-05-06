@@ -46,5 +46,5 @@ export namespace IControllerOptions {
   /**
    * Symbol for injecting the controller options service
    */
-  export const $ = Symbol.for("IControllerOptions")
+  export const $ = Symbol.for('IControllerOptions')
 }

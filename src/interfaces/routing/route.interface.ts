@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 /**
  * Interface for route handlers
@@ -23,5 +23,5 @@ export namespace IRouteHandler {
   /**
    * Symbol for injecting the route handler service
    */
-  export const $ = Symbol.for("IRouteHandler")
+  export const $ = Symbol.for('IRouteHandler')
 }

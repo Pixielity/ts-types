@@ -32,5 +32,5 @@ export namespace ICacheItem {
   /**
    * Symbol for injecting the cache item service
    */
-  export const $ = Symbol.for("ICacheItem")
+  export const $ = Symbol.for('ICacheItem')
 }

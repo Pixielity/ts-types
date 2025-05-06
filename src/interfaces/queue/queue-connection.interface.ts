@@ -1,4 +1,4 @@
-import type { IQueueable } from "./queueable.interface"
+import type { IQueueable } from './queueable.interface'
 
 /**
  * Interface for queue connections.
@@ -123,5 +123,5 @@ export interface IQueueConnection {
  * DI token for IQueueConnection interface
  */
 export namespace IQueueConnection {
-  export const $ = Symbol.for("IQueueConnection")
+  export const $ = Symbol.for('IQueueConnection')
 }

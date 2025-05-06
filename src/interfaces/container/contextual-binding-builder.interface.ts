@@ -1,5 +1,5 @@
-import type { IContainer } from "./container.interface"
-import type { IContextualBindingImplementationBuilder } from "./contextual-binding-implementation-builder.interface"
+import type { IContainer } from './container.interface'
+import type { IContextualBindingImplementationBuilder } from './contextual-binding-implementation-builder.interface'
 
 /**
  * Interface for the contextual binding builder
@@ -42,7 +42,7 @@ export namespace IContextualBindingBuilder {
   /**
    * Symbol for injecting the contextual binding builder service
    */
-  export const $ = Symbol.for("IContextualBindingBuilder")
+  export const $ = Symbol.for('IContextualBindingBuilder')
 }
 
 /**
@@ -52,5 +52,5 @@ export namespace IContextualBindingBuilderFactory {
   /**
    * Symbol for injecting the contextual binding builder factory service
    */
-  export const $ = Symbol.for("IContextualBindingBuilderFactory")
+  export const $ = Symbol.for('IContextualBindingBuilderFactory')
 }

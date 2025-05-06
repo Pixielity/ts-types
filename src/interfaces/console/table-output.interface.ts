@@ -43,5 +43,5 @@ export namespace ITableOutput {
    * Token for the ITableOutput interface
    * Used for dependency injection
    */
-  export const $ = Symbol("ITableOutput")
+  export const $ = Symbol('ITableOutput')
 }

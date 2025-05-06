@@ -1,4 +1,4 @@
-import type { IShouldQueue } from "./should-queue.interface"
+import type { IShouldQueue } from './should-queue.interface'
 
 /**
  * Interface for queueable jobs.
@@ -85,5 +85,5 @@ export interface IQueueable extends IShouldQueue {
  * DI token for IQueueable interface
  */
 export namespace IQueueable {
-  export const $ = Symbol.for("IQueueable")
+  export const $ = Symbol.for('IQueueable')
 }

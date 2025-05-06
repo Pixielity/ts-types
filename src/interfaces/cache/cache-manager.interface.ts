@@ -1,5 +1,5 @@
-import type { IStore } from "./store.interface"
-import type { IRepository } from "./repository.interface"
+import type { IStore } from './store.interface'
+import type { IRepository } from './repository.interface'
 
 /**
  * Interface for the cache manager
@@ -62,5 +62,5 @@ export namespace ICacheManager {
   /**
    * Symbol for injecting the cache manager service
    */
-  export const $ = Symbol.for("ICacheManager")
+  export const $ = Symbol.for('ICacheManager')
 }

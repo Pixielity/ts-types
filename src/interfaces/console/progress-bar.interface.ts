@@ -1,4 +1,4 @@
-import type { MultiBar } from "cli-progress"
+import type { MultiBar } from 'cli-progress'
 
 /**
  * Interface for progress bar
@@ -38,5 +38,5 @@ export namespace IProgressBar {
    * Token for the IProgressBar interface
    * Used for dependency injection
    */
-  export const $ = Symbol("IProgressBar")
+  export const $ = Symbol('IProgressBar')
 }

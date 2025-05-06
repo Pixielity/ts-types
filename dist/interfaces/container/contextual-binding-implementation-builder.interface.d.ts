@@ -1,5 +1,5 @@
-export { b as IContextualBindingImplementationBuilder } from '../../service-provider.inteface-clcQqhXg.js';
-import 'inversify';
-import '../../types/service-identifier.type.js';
-import '../../types/newable.type.js';
-import '../abstract.interface.js';
+export { b as IContextualBindingImplementationBuilder } from '../../service-provider.inteface-clcQqhXg.js'
+import 'inversify'
+import '../../types/service-identifier.type.js'
+import '../../types/newable.type.js'
+import '../abstract.interface.js'

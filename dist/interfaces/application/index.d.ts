@@ -1,11 +1,11 @@
-export { IApplication } from './application.interface.js';
-export { I as IServiceProvider } from '../../service-provider.inteface-clcQqhXg.js';
-import 'inversify';
-import '../cache/cache.interface.js';
-import '../cache/lock.interface.js';
-import '../../types/service-identifier.type.js';
-import '../../types/newable.type.js';
-import '../abstract.interface.js';
-import '../config/repository.interface.js';
-import '../config/schema.interface.js';
-import '../../enums/config-enviroment.enum.js';
+export { IApplication } from './application.interface.js'
+export { I as IServiceProvider } from '../../service-provider.inteface-clcQqhXg.js'
+import 'inversify'
+import '../cache/cache.interface.js'
+import '../cache/lock.interface.js'
+import '../../types/service-identifier.type.js'
+import '../../types/newable.type.js'
+import '../abstract.interface.js'
+import '../config/repository.interface.js'
+import '../config/schema.interface.js'
+import '../../enums/config-enviroment.enum.js'

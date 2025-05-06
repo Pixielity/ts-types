@@ -1,6 +1,6 @@
 /**
  * Newable type
  */
-type Newable<T> = new (...args: any[]) => T;
+type Newable<T> = new (...args: any[]) => T
 
-export type { Newable };
+export type { Newable }

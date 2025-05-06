@@ -64,5 +64,5 @@ export namespace IOutput {
    * Token for the IOutput interface
    * Used for dependency injection
    */
-  export const $ = Symbol("IOutput")
+  export const $ = Symbol('IOutput')
 }

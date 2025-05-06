@@ -27,5 +27,5 @@ export namespace IConfigLoader {
   /**
    * Symbol for injecting the config loader service
    */
-  export const $ = Symbol.for("IConfigLoader")
+  export const $ = Symbol.for('IConfigLoader')
 }

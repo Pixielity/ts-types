@@ -5,25 +5,25 @@ export enum ConfigEnvironment {
   /**
    * Node.js environment
    */
-  NODE = "node",
+  NODE = 'node',
 
   /**
    * Browser environment
    */
-  BROWSER = "browser",
+  BROWSER = 'browser',
 
   /**
    * Next.js environment
    */
-  NEXTJS = "nextjs",
+  NEXTJS = 'nextjs',
 
   /**
    * React Native environment
    */
-  REACT_NATIVE = "react-native",
+  REACT_NATIVE = 'react-native',
 
   /**
    * Unknown environment
    */
-  UNKNOWN = "unknown",
+  UNKNOWN = 'unknown',
 }

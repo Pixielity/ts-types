@@ -1,4 +1,4 @@
-import type { ICommand } from "./command.interface"
+import type { ICommand } from './command.interface'
 
 /**
  * Interface for the console application
@@ -50,5 +50,5 @@ export namespace IApplication {
    * Token for the IApplication interface
    * Used for dependency injection
    */
-  export const $ = Symbol("IApplication")
+  export const $ = Symbol('IApplication')
 }

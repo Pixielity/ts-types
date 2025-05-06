@@ -50,5 +50,5 @@ export namespace ICacheValueResult {
   /**
    * Symbol for injecting the cache value result service
    */
-  export const $ = Symbol.for("ICacheValueResult")
+  export const $ = Symbol.for('ICacheValueResult')
 }

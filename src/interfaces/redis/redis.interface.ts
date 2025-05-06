@@ -1,3 +1,3 @@
 export namespace IRedis {
-  export const $ = Symbol.for("IRedis")
+  export const $ = Symbol.for('IRedis')
 }

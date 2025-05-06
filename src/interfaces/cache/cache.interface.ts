@@ -1,4 +1,4 @@
-import type { ILock } from "./lock.interface"
+import type { ILock } from './lock.interface'
 
 /**
  * Interface for the main cache service
@@ -129,5 +129,5 @@ export namespace ICache {
   /**
    * Symbol for injecting the cache service
    */
-  export const $ = Symbol.for("ICache")
+  export const $ = Symbol.for('ICache')
 }

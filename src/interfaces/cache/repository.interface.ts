@@ -1,5 +1,5 @@
-import type { ICache } from "./cache.interface"
-import type { ITaggedCache } from "./tagged-cache.interface"
+import type { ICache } from './cache.interface'
+import type { ITaggedCache } from './tagged-cache.interface'
 
 /**
  * Interface for the cache repository
@@ -32,5 +32,5 @@ export namespace IRepository {
   /**
    * Symbol for injecting the repository service
    */
-  export const $ = Symbol.for("IRepository")
+  export const $ = Symbol.for('IRepository')
 }

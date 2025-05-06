@@ -1,4 +1,4 @@
-import type { IConfigSchema } from "./schema.interface"
+import type { IConfigSchema } from './schema.interface'
 
 /**
  * Interface for the configuration validator

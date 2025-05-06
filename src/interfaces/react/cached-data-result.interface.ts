@@ -48,5 +48,5 @@ export namespace ICachedDataResult {
   /**
    * Symbol for injecting the cached data result service
    */
-  export const $ = Symbol.for("ICachedDataResult")
+  export const $ = Symbol.for('ICachedDataResult')
 }

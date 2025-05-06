@@ -1,2 +1,2 @@
-export * from "./application.interface"
-export * from "./service-provider.inteface"
+export * from './application.interface'
+export * from './service-provider.inteface'

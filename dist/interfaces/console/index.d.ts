@@ -1,19 +1,19 @@
-export { IApplication as IConsoleApplication } from './application.interface.js';
-export { ICommand } from './command.interface.js';
-export { ICommandShortcut } from './command-shortcut.interface.js';
-export { ICommandOptions } from './command-options.interface.js';
-export { ICommandRegistry } from './command-registry.interface.js';
-export { ICommandCollector } from './command-collector.interface.js';
-export { ICommandScheduler } from './command-scheduler.interface.js';
-export { IInput } from './input.interface.js';
-export { IOutput } from './output.interface.js';
-export { IStubGenerator } from './stub-generator.interface.js';
-export { IAsk } from './ask.interface.js';
-export { IQuestion } from './question.interface.js';
-export { ITableOutput } from './table-output.interface.js';
-export { ITableStyle } from './table-style.interface.js';
-export { IProgressBar } from './progress-bar.interface.js';
-export { IProgressBarFormat } from './progress-bar-format.interface.js';
-export { IScheduleExpression } from './schedule-expression.interface.js';
-export { IScheduledTask } from './scheduled-task.interface.js';
-import '../../enums/question-type.enum.js';
+export { IApplication as IConsoleApplication } from './application.interface.js'
+export { ICommand } from './command.interface.js'
+export { ICommandShortcut } from './command-shortcut.interface.js'
+export { ICommandOptions } from './command-options.interface.js'
+export { ICommandRegistry } from './command-registry.interface.js'
+export { ICommandCollector } from './command-collector.interface.js'
+export { ICommandScheduler } from './command-scheduler.interface.js'
+export { IInput } from './input.interface.js'
+export { IOutput } from './output.interface.js'
+export { IStubGenerator } from './stub-generator.interface.js'
+export { IAsk } from './ask.interface.js'
+export { IQuestion } from './question.interface.js'
+export { ITableOutput } from './table-output.interface.js'
+export { ITableStyle } from './table-style.interface.js'
+export { IProgressBar } from './progress-bar.interface.js'
+export { IProgressBarFormat } from './progress-bar-format.interface.js'
+export { IScheduleExpression } from './schedule-expression.interface.js'
+export { IScheduledTask } from './scheduled-task.interface.js'
+import '../../enums/question-type.enum.js'

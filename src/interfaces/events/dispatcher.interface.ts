@@ -1,8 +1,8 @@
-import type { Observable } from "rxjs"
-import type { IEvent } from "./event.interface"
-import type { IListener } from "./listener.interface"
-import type { ISubscriber } from "./subscriber.interface"
-import type { IEventData } from "./event-data.interface"
+import type { Observable } from 'rxjs'
+import type { IEvent } from './event.interface'
+import type { IListener } from './listener.interface'
+import type { ISubscriber } from './subscriber.interface'
+import type { IEventData } from './event-data.interface'
 
 /**
  * Interface for the event dispatcher.
@@ -115,5 +115,5 @@ export interface IEventDispatcher {
  * DI token for IEventDispatcher interface
  */
 export namespace IEventDispatcher {
-  export const $ = Symbol.for("IEventDispatcher")
+  export const $ = Symbol.for('IEventDispatcher')
 }

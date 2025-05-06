@@ -1,5 +1,5 @@
-import type { IConfigSchema } from "./schema.interface"
-import type { IConfigCacheOptions } from "./cache-options.interface"
+import type { IConfigSchema } from './schema.interface'
+import type { IConfigCacheOptions } from './cache-options.interface'
 
 /**
  * Configuration repository options
@@ -54,5 +54,5 @@ export namespace IConfigRepositoryOptions {
   /**
    * Symbol for injecting the config repository options service
    */
-  export const $ = Symbol.for("IConfigRepositoryOptions")
+  export const $ = Symbol.for('IConfigRepositoryOptions')
 }

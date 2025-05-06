@@ -1,4 +1,4 @@
-import type { ParamType } from "../../enums"
+import type { ParamType } from '../../enums'
 
 /**
  * Interface for parameter metadata
@@ -29,5 +29,5 @@ export namespace IParamMetadata {
   /**
    * Symbol for injecting the param metadata service
    */
-  export const $ = Symbol.for("IParamMetadata")
+  export const $ = Symbol.for('IParamMetadata')
 }

@@ -1,4 +1,4 @@
-import type { QuestionType } from "../../enums"
+import type { QuestionType } from '../../enums'
 
 /**
  * Interface for question

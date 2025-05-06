@@ -1,4 +1,4 @@
-import type { IEventDispatcher } from "./dispatcher.interface"
+import type { IEventDispatcher } from './dispatcher.interface'
 
 /**
  * Interface for event subscribers.
@@ -18,5 +18,5 @@ export interface ISubscriber {
  * DI token for ISubscriber interface
  */
 export namespace ISubscriber {
-  export const $ = Symbol.for("ISubscriber")
+  export const $ = Symbol.for('ISubscriber')
 }

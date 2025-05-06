@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 /**
  * Interface for route guards
@@ -23,5 +23,5 @@ export namespace IGuard {
   /**
    * Symbol for injecting the guard service
    */
-  export const $ = Symbol.for("IGuard")
+  export const $ = Symbol.for('IGuard')
 }

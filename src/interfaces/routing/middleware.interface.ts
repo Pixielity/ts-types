@@ -1,4 +1,4 @@
-import type { NextApiRequest, NextApiResponse } from "next"
+import type { NextApiRequest, NextApiResponse } from 'next'
 
 /**
  * Interface for route middleware
@@ -24,5 +24,5 @@ export namespace IMiddleware {
   /**
    * Symbol for injecting the middleware service
    */
-  export const $ = Symbol.for("IMiddleware")
+  export const $ = Symbol.for('IMiddleware')
 }

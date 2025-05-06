@@ -88,5 +88,5 @@ export interface IWorker {
  * DI token for IWorker interface
  */
 export namespace IWorker {
-  export const $ = Symbol.for("IWorker")
+  export const $ = Symbol.for('IWorker')
 }

@@ -1,5 +1,5 @@
-import type { IScheduleExpression } from "./schedule-expression.interface"
-import type { IScheduledTask } from "./scheduled-task.interface"
+import type { IScheduleExpression } from './schedule-expression.interface'
+import type { IScheduledTask } from './scheduled-task.interface'
 
 /**
  * Interface for the command scheduler
@@ -63,5 +63,5 @@ export namespace ICommandScheduler {
    * Token for the ICommandScheduler interface
    * Used for dependency injection
    */
-  export const $ = Symbol("ICommandScheduler")
+  export const $ = Symbol('ICommandScheduler')
 }
