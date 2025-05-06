@@ -71,20 +71,20 @@ export interface ICommand {
   setArgument(key: string, value: any): void
 
   /**
-   * Gets a single argument by name.
+   * Gets all arguments.
    *
-   * @param key - Argument name.
-   * @returns The value or undefined.
+   * @returns A key-value map of arguments.
    */
-  getArgument<T = any>(key: string): T | undefined
+  getArguments(): Record<string, any>
 
   /**
    * Gets a single argument by name.
    *
    * @param key - Argument name.
+   * @param defaultValue - default value .
    * @returns The value or undefined.
    */
-  getArgument(key: string): any
+  getArgument<T = any>(key: string, defaultValue?: string): T | undefined
 
   /**
    * Sets multiple options by key.
@@ -112,9 +112,10 @@ export interface ICommand {
    * Gets a single option by key.
    *
    * @param key - Option name.
+   * @param defaultValue - default value .
    * @returns The value or undefined.
    */
-  getOption<T = any>(key: string): T | undefined
+  getOption<T = any>(key: string, defaultValue?: string): T | undefined
 
   /**
    * Allows a command to define its expected arguments and options.
