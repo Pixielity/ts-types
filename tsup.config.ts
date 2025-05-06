@@ -1,12 +1,3 @@
-/**
- * @file tsup.config.ts
- * @description Build configuration for the TS Types library
- *
- * This file configures the build process using tsup, which is a
- * TypeScript bundler powered by esbuild. It defines how the source
- * code is compiled, bundled, and prepared for distribution.
- */
-
 import { defineConfig } from 'tsup'
 import { readFileSync } from 'fs'
 import { join } from 'path'

@@ -2,83 +2,125 @@ import { IInput } from './input.interface.js';
 import { IOutput } from './output.interface.js';
 
 /**
- * Interface for console commands
+ * Interface for console command classes.
  *
- * All commands must implement this interface to be registered
- * and executed by the console application.
+ * Defines the structure and lifecycle of a command,
+ * including argument/option handling and execution hooks.
  */
 interface ICommand {
     /**
-     * Gets the name of the command
+     * Gets the name of the command.
      *
-     * @returns {string} The command name
+     * @returns The command name.
      */
     getName(): string;
     /**
-     * Gets the description of the command
+     * Gets the description of the command.
      *
-     * @returns {string} The command description
+     * @returns The command description.
      */
     getDescription(): string;
     /**
-     * Configures the command with options and arguments
-     */
-    configure(): void;
-    /**
-     * Sets the input instance
+     * Sets the input instance for the command.
      *
-     * @param {IInput} input - The input instance
+     * @param input - The input instance to set.
      */
     setInput(input: IInput): void;
     /**
-     * Gets the input instance
+     * Gets the current input instance.
      *
-     * @returns {IInput} The input instance
+     * @returns The input instance.
      */
     getInput(): IInput;
     /**
-     * Sets the output instance
+     * Sets the output instance for the command.
      *
-     * @param {IOutput} output - The output instance
+     * @param output - The output instance to set.
      */
     setOutput(output: IOutput): void;
     /**
-     * Gets the output instance
+     * Gets the current output instance.
      *
-     * @returns {IOutput} The output instance
+     * @returns The output instance.
      */
     getOutput(): IOutput;
     /**
-     * Sets the command arguments
+     * Sets multiple arguments by index or name.
      *
-     * @param {string[]} args - The command arguments
+     * @param args - Array of positional arguments.
      */
     setArguments(args: string[]): void;
     /**
-     * Sets the command options
+     * Sets a single named argument.
      *
-     * @param {Record<string, any>} options - The command options
+     * @param key - Argument key.
+     * @param value - Argument value.
+     */
+    setArgument(key: string, value: any): void;
+    /**
+     * Gets all arguments.
+     *
+     * @returns A key-value map of arguments.
+     */
+    getArguments(): Record<string, any>;
+    /**
+     * Gets a single argument by name.
+     *
+     * @param key - Argument name.
+     * @returns The value or undefined.
+     */
+    getArgument(key: string): any;
+    /**
+     * Sets multiple options by key.
+     *
+     * @param options - Key-value map of options.
      */
     setOptions(options: Record<string, any>): void;
     /**
-     * Executes the command
+     * Sets a single option.
      *
-     * @returns {Promise<number | void>} The exit code or void
+     * @param key - Option key.
+     * @param value - Option value.
+     */
+    setOption(key: string, value: any): void;
+    /**
+     * Gets all options.
+     *
+     * @returns A key-value map of options.
+     */
+    getOptions(): Record<string, any>;
+    /**
+     * Gets a single option by key.
+     *
+     * @param key - Option name.
+     * @returns The value or undefined.
+     */
+    getOption(key: string): any;
+    /**
+     * Allows a command to define its expected arguments and options.
+     * Called before execution.
+     */
+    configure(): void;
+    /**
+     * Main execution logic of the command.
+     * Must return a status code (or void).
+     *
+     * @returns Promise resolving to exit code or void.
      */
     execute(): Promise<number | void>;
     /**
-     * Hook that runs before command execution
+     * Hook called before command execution.
+     * Return false to cancel execution.
      *
-     * @returns {Promise<boolean>} True if execution should continue, false to abort
+     * @returns Whether to continue execution.
      */
-    beforeExecute?(): Promise<boolean>;
+    beforeExecute(): Promise<boolean>;
     /**
-     * Hook that runs after command execution
+     * Hook called after command execution.
      *
-     * @param {number | void} exitCode - The exit code from the command
-     * @returns {Promise<void>}
+     * @param exitCode - The result from execute().
      */
-    afterExecute?(exitCode: number | void): Promise<void>;
+    afterExecute(exitCode: number | void): Promise<void>;
 }
 /**
  * Namespace for ICommand interface
