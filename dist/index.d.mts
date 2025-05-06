@@ -24,7 +24,7 @@ export { IEvent } from './interfaces/events/event.interface.mjs';
 export { IListener } from './interfaces/events/listener.interface.mjs';
 export { IEventData } from './interfaces/events/event-data.interface.mjs';
 export { IEventBus } from './interfaces/events/event-bus.interface.mjs';
-export { I as IEventDispatcher, a as ISubscriber } from './dispatcher.interface-V_K7dygW.mjs';
+export { I as IEventDispatcher, a as ISubscriber } from './dispatcher.interface-DvncSSnh.mjs';
 export { IQueueable } from './interfaces/queue/queueable.interface.mjs';
 export { IShouldQueue } from './interfaces/queue/should-queue.interface.mjs';
 export { IJobOptions } from './interfaces/queue/job-options.interface.mjs';

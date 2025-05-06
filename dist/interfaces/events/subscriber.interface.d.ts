@@ -1,4 +1,4 @@
-export { a as ISubscriber } from '../../dispatcher.interface-Cj1ehbOd.js';
+export { a as ISubscriber } from '../../dispatcher.interface-Cs4e1DMu.js';
 import 'rxjs';
 import './event.interface.js';
 import './listener.interface.js';

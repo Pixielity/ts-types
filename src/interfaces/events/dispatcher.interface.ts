@@ -71,6 +71,13 @@ export interface IEventDispatcher {
   events(): Observable<IEventData>
 
   /**
+   * Get an observable of all events with their names
+   *
+   * @returns An observable of events with their names
+   */
+  getEventStream(): Observable<{ name: string; event: any }>
+
+  /**
    * Get an observable of events with a specific name
    *
    * @param eventName - The event name
