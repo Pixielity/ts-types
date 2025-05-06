@@ -10,6 +10,12 @@
  */
 
 
+// src/interfaces/console/ui/ask.interface.ts
+exports.IAsk = void 0;
+((IAsk2) => {
+  IAsk2.$ = Symbol("IAsk");
+})(exports.IAsk || (exports.IAsk = {}));
+
 // src/interfaces/console/ui/table-output.interface.ts
 exports.ITableOutput = void 0;
 ((ITableOutput2) => {

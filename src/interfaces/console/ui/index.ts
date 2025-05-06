@@ -1,4 +1,5 @@
 // UI interfaces
+export * from './ask.interface'
 export * from './question.interface'
 export * from './table-output.interface'
 export * from './table-style.interface'

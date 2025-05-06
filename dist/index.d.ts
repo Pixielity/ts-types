@@ -49,6 +49,7 @@ export { ICommandRegistry } from './interfaces/console/command/registry.interfac
 export { ICommandCollector } from './interfaces/console/command/collector.interface.js';
 export { ICommandScheduler } from './interfaces/console/command/scheduler.interface.js';
 export { IQueueableOptions } from './interfaces/console/decorator/queueable-options.interface.js';
+export { IAsk } from './interfaces/console/ui/ask.interface.js';
 export { IQuestion } from './interfaces/console/ui/question.interface.js';
 export { ITableOutput } from './interfaces/console/ui/table-output.interface.js';
 export { ITableBorderChars, ITableStyle, ITableStyleColors } from './interfaces/console/ui/table-style.interface.js';
@@ -82,5 +83,4 @@ import 'inversify';
 import 'class-validator';
 import 'rxjs';
 import 'react';
-import './interfaces/console/ui/ask.interface.js';
 import 'next';

@@ -8,6 +8,12 @@
  */
 
 
+// src/interfaces/console/ui/ask.interface.ts
+var IAsk;
+((IAsk2) => {
+  IAsk2.$ = Symbol("IAsk");
+})(IAsk || (IAsk = {}));
+
 // src/interfaces/console/ui/table-output.interface.ts
 var ITableOutput;
 ((ITableOutput2) => {
@@ -20,6 +26,6 @@ var IProgressBar;
   IProgressBar2.$ = Symbol("IProgressBar");
 })(IProgressBar || (IProgressBar = {}));
 
-export { IProgressBar, ITableOutput };
+export { IAsk, IProgressBar, ITableOutput };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map

@@ -1,3 +1,4 @@
+export { IAsk } from './ask.interface.js';
 export { IQuestion } from './question.interface.js';
 export { ITableOutput } from './table-output.interface.js';
 export { ITableBorderChars, ITableStyle, ITableStyleColors } from './table-style.interface.js';

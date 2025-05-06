@@ -56,6 +56,12 @@ var ICommandScheduler;
   ICommandScheduler2.$ = Symbol("ICommandScheduler");
 })(ICommandScheduler || (ICommandScheduler = {}));
 
+// src/interfaces/console/ui/ask.interface.ts
+var IAsk;
+((IAsk2) => {
+  IAsk2.$ = Symbol("IAsk");
+})(IAsk || (IAsk = {}));
+
 // src/interfaces/console/ui/table-output.interface.ts
 var ITableOutput;
 ((ITableOutput2) => {
@@ -68,6 +74,6 @@ var IProgressBar;
   IProgressBar2.$ = Symbol("IProgressBar");
 })(IProgressBar || (IProgressBar = {}));
 
-export { ICommand, ICommandCollector, ICommandRegistry, ICommandScheduler, IApplication as IConsoleApplication, IInput, IOutput, IProgressBar, IStubGenerator, ITableOutput };
+export { IAsk, ICommand, ICommandCollector, ICommandRegistry, ICommandScheduler, IApplication as IConsoleApplication, IInput, IOutput, IProgressBar, IStubGenerator, ITableOutput };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map
