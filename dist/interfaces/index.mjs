@@ -201,6 +201,12 @@ var IWorker;
   IWorker2.$ = Symbol.for("IWorker");
 })(IWorker || (IWorker = {}));
 
+// src/interfaces/queue/rate-limit.interface.ts
+var IRateLimiter;
+((IRateLimiter2) => {
+  IRateLimiter2.$ = Symbol.for("IRateLimiter");
+})(IRateLimiter || (IRateLimiter = {}));
+
 // src/interfaces/react/app-provider-props.interface.ts
 var IAppProviderProps;
 ((IAppProviderProps2) => {
@@ -375,6 +381,6 @@ var IControllerDefinition;
   IControllerDefinition2.$ = Symbol.for("IControllerDefinition");
 })(IControllerDefinition || (IControllerDefinition = {}));
 
-export { IAppProviderProps, IApplication, IAsk, ICache, ICacheItem, ICacheManager, ICacheValueResult, ICachedDataResult, IClassDecoratorOptions, ICommand, ICommandCollector, ICommandRegistry, ICommandScheduler, IConfig, IConfigCache, IConfigCacheOptions, IConfigLoader, IConfigOptions, IConfigRepositoryOptions, IApplication2 as IConsoleApplication, IContainer, IContainerProviderProps, IController, IControllerDefinition, IControllerOptions, IEvent, IEventBus, IEventDispatcher, IGuard, IInput, IJobRegistry, IListener, ILock, ILockProvider, ILogOptions, IMiddleware, IOutput, IParamMetadata, IProgressBar, IQueueConnection, IQueueManager, IQueueable, IRedis, IRedisConnection, IRedisConnector, IRedisFactory, IRepository, IRouteDefinition, IRouteHandler, IRouteOptions, IRouterConfig, IServiceProvider, IShouldQueue, IStore, IStubGenerator, ISubscriber, ITableOutput, ITaggedCache, IValidationFunction, IWorker };
+export { IAppProviderProps, IApplication, IAsk, ICache, ICacheItem, ICacheManager, ICacheValueResult, ICachedDataResult, IClassDecoratorOptions, ICommand, ICommandCollector, ICommandRegistry, ICommandScheduler, IConfig, IConfigCache, IConfigCacheOptions, IConfigLoader, IConfigOptions, IConfigRepositoryOptions, IApplication2 as IConsoleApplication, IContainer, IContainerProviderProps, IController, IControllerDefinition, IControllerOptions, IEvent, IEventBus, IEventDispatcher, IGuard, IInput, IJobRegistry, IListener, ILock, ILockProvider, ILogOptions, IMiddleware, IOutput, IParamMetadata, IProgressBar, IQueueConnection, IQueueManager, IQueueable, IRateLimiter, IRedis, IRedisConnection, IRedisConnector, IRedisFactory, IRepository, IRouteDefinition, IRouteHandler, IRouteOptions, IRouterConfig, IServiceProvider, IShouldQueue, IStore, IStubGenerator, ISubscriber, ITableOutput, ITaggedCache, IValidationFunction, IWorker };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map

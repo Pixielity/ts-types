@@ -203,6 +203,12 @@ exports.IWorker = void 0;
   IWorker2.$ = Symbol.for("IWorker");
 })(exports.IWorker || (exports.IWorker = {}));
 
+// src/interfaces/queue/rate-limit.interface.ts
+exports.IRateLimiter = void 0;
+((IRateLimiter2) => {
+  IRateLimiter2.$ = Symbol.for("IRateLimiter");
+})(exports.IRateLimiter || (exports.IRateLimiter = {}));
+
 // src/interfaces/react/app-provider-props.interface.ts
 exports.IAppProviderProps = void 0;
 ((IAppProviderProps2) => {

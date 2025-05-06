@@ -44,6 +44,12 @@ var IWorker;
   IWorker2.$ = Symbol.for("IWorker");
 })(IWorker || (IWorker = {}));
 
-export { IJobRegistry, IQueueConnection, IQueueManager, IQueueable, IShouldQueue, IWorker };
+// src/interfaces/queue/rate-limit.interface.ts
+var IRateLimiter;
+((IRateLimiter2) => {
+  IRateLimiter2.$ = Symbol.for("IRateLimiter");
+})(IRateLimiter || (IRateLimiter = {}));
+
+export { IJobRegistry, IQueueConnection, IQueueManager, IQueueable, IRateLimiter, IShouldQueue, IWorker };
 //# sourceMappingURL=index.mjs.map
 //# sourceMappingURL=index.mjs.map

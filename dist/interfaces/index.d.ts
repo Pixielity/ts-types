@@ -32,6 +32,7 @@ export { IQueueConnection } from './queue/queue-connection.interface.js';
 export { IQueueManager } from './queue/queue-manager.interface.js';
 export { IJobRegistry } from './queue/job-registry.interface.js';
 export { IWorker } from './queue/worker.interface.js';
+export { IRateLimiter } from './queue/rate-limit.interface.js';
 export { IAppProviderProps } from './react/app-provider-props.interface.js';
 export { IContainerProviderProps } from './react/container-provider-props.interface.js';
 export { ICachedDataResult } from './react/cached-data-result.interface.js';

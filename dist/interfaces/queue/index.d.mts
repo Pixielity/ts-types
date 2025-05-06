@@ -5,4 +5,5 @@ export { IQueueConnection } from './queue-connection.interface.mjs';
 export { IQueueManager } from './queue-manager.interface.mjs';
 export { IJobRegistry } from './job-registry.interface.mjs';
 export { IWorker } from './worker.interface.mjs';
+export { IRateLimiter } from './rate-limit.interface.mjs';
 import '../../enums/worker-status.enum.mjs';
